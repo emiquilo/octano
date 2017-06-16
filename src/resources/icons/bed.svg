@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>bed</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Átomos" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Iconos" transform="translate(-323.000000, -3468.000000)" fill="#666666">
+            <g id="ico_hotelroom" transform="translate(323.000000, 3468.000000)">
+                <path d="M0,7 L0,24 L2.90909091,24 L2.90909091,19.75 L29.0909091,19.75 L29.0909091,24 L32,24 L32,9.83333333 L29.0909091,9.83333333 L29.0909091,16.91525 L2.90909091,16.91525 L2.90909091,7 L0,7 Z M11.6363636,15.4985833 L27.6363636,15.4985833 L27.6363636,11.2485833 L11.6363636,11.2485833 L11.6363636,15.4985833 Z M7.27272727,15.5 C8.87937382,15.5 10.1818182,14.2314735 10.1818182,12.6666667 C10.1818182,11.1018599 8.87937382,9.83333333 7.27272727,9.83333333 C5.66608073,9.83333333 4.36363636,11.1018599 4.36363636,12.6666667 C4.36363636,14.2314735 5.66608073,15.5 7.27272727,15.5 Z" id="hotelroom"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,105 @@
+<div class="eva-3-row">
+	<div class="users-ctn col -lg-8">
+
+		<!-- Listado de usuarios -->
+		<ul class="persons">
+			<li *ngFor="let person of persons" (click)="onSelect(person)" [class.selected]="person === selectedPerson">
+				<div class="eva-3-cluster-basic">
+					<div class="cluster-container">
+						<div class="cluster-content">
+							<div class="cluster-description">
+								<span class="eva-3-h5 -eva-3-bold"> {{person.name + ' '+ person.lastName}} </span>
+								<p class="eva-3-h6 -eva-3-italic">Moto</p>
+								<p class="eva-3-p" *ngFor="let bike of person.motorbikes">- {{ bike.brand + ' ' + bike.cc + 'cc' }}</p>
+
+								<a class="delete" (click)="delete(person); $event.stopPropagation()" class="eva-3-btn -sm -primary" (click)="add(personName.value); personName.value=''"><em class="btn-text">Eliminar</em></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	
+	<div class="user-detail col -lg-4">
+		
+		<!-- search by name -->
+		<person-search></person-search>
+
+		<div class="eva-3-cluster-basic profile" [class.active]="selectedPerson">
+			<div class="cluster-container">
+				<div class="cluster-content">
+					<div class="cluster-header">
+						<p class="eva-3-h5">Perfiles de usuarios</p>
+						<span class="eva-3-icon-user"></span>
+					</div>
+					<div class="cluster-description">
+						<!--  -->
+						<div *ngIf="!selectedPerson" class="detail">
+							<p class="eva-3-h5 -eva-3-bold">Importante</p>
+							<p class="eva-3-p">Se verá un resumen del usuario seleccionado mostrando datos mas generales sobre su perfil.
+							De esta manera lo podemos guiar directamente a una ficha técnica, completa, donde podrá ver datos, estadisticas, estados de mantenimientos sobre su rodado.
+							--- (idea poder generar un diagrama de distribución otto) 
+							</p>
+						</div>
+						<!-- Detalle previo de los usuarios -->
+						<div *ngIf="selectedPerson">
+
+							<div>
+								<h3 class="eva-3-h5 -eva-3-bold">{{selectedPerson.name | uppercase}} </h3>
+								<p class="eva-3-p">Es {{selectedPerson.type}} desde: 15/05/2017</p>
+								<p class="eva-3-p">N° motos registradas:  {{selectedPerson.motorbikes.length }}</p>
+								
+								<p *ngFor="let bike of selectedPerson.motorbikes" class="eva-3-p">
+									<span *ngIf="getMotorbikeServices(bike) > 0">
+										N° de servicios aplicados: {{ getMotorbikeServices(bike) }}
+									</span>
+								</p>
+								
+								<p class="eva-3-p">Tipo de mantenimiento más frecuente:  mecánico/eléctrico</p>
+							</div>
+
+							<a (click)="gotoDetail()" class="eva-3-btn -md -secondary" (click)="add(personName.value); personName.value=''"><em class="btn-text">Ver ficha completa</em></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="eva-3-cluster-basic add-user-btn">
+			<div class="cluster-container">
+				<div class="cluster-content">
+					<div class="cluster-header">
+						<p class="eva-3-h5">
+							<a class="eva-3-btn -md -link">
+								<em class="btn-text">Crear un usuario nuevo</em>
+							</a>
+						</p>
+						<span class="eva-3-icon-plus"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="eva-3-cluster-basic product-list">
+			<div class="cluster-container">
+				<div class="cluster-content">
+					<div class="cluster-header">
+						<p class="eva-3-h5">Tareas Pendientes</p>
+						<span class="eva-3-icon-list"></span>
+					</div>
+					<div class="cluster-description">
+						<ul>
+							<li>
+								<p class="eva-3-p -eva-3-italic">- Service 3000kb - [ rodado del usuario ] -</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+<!-- modal para crear usuarios -->

@@ -1,0 +1,58 @@
+Generar un registro sobre los usuarios, y sus respectivos rodados.
+
+Crear, editar, Eliminar 
+
+Tener un detalle sobre los usuarios/rodados
+
+Listado sobre las intervenciones que se le efectúan.
+
+---------------------------------------------------------------------------------
+-----------MECANICO-------------------------ELECTRICO----------------------------
+---------------------------------------------------------------------------------
+( separando el tipo de servicio que se le realizara al rodado, se podrian tener informacion mas precisa y poder profundizar en un mejor diagnostico )
+---------------------------------------------------------------------------------
+
+
+A partir de la recopilacion de diferentes datos poder sacar estadisticas
+IDEAL poder generar un diagrama de distribucion OTTO actualizado.
+
+*******************************************************************************
+
+SECCIONES 
+
+*******************************************************************************
+
+CLIENTE
+listado de usarios - en estas secciones se puede acceder a un vistazo rapido de los usuarios y un detalle resumido, al hacer click sobre el usuario que se esta interesado, la página redirige a una sección de detalle donde se muestra toda la informacion de estos 
+
+Cliente ---------------
+
+Nombre, Apellido,Tipo de usuario, telefono, moto/s , marca,cc, modelo, kmt.
+
+-------------------------------------------------------------------------------
+
+Dashboard - PRODUCTOS
+
+   |
+   |
+   |
+   |
+   V
+
+   estadisticas sobre 
+
+   Cant de usuarios
+	tareas  - estados -
+	ganancias/costos 
+	tipos de trabajos realizados
+	tareas pendientes - listado - info rapida mostrando en 1 linea la descripcion de la tarea
+	Top usuarios 
+
+	* Las ganancias se obtienen del "template/ficha tecnica" donde se cargan la tarea con las modificaciones 
+	del rodado ( input con los costos/repuestos e intput = mano de obra  ) 
+
+	*A partir de la carga de tareas, generar reservas -- Disponibilidad 
+
+	
+ /* Carga de usuarios */
+ 

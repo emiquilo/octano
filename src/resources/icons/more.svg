@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.1 (35376) - http://www.bohemiancoding.com/sketch -->
+    <title>more</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-182.000000, -48.000000)" fill="#666666">
+            <g id="ico_more" transform="translate(182.000000, 48.000000)">
+                <path d="M4,19 C5.65685425,19 7,17.6568542 7,16 C7,14.3431458 5.65685425,13 4,13 C2.34314575,13 1,14.3431458 1,16 C1,17.6568542 2.34314575,19 4,19 Z M16,19 C17.6568542,19 19,17.6568542 19,16 C19,14.3431458 17.6568542,13 16,13 C14.3431458,13 13,14.3431458 13,16 C13,17.6568542 14.3431458,19 16,19 Z M28,19 C29.6568542,19 31,17.6568542 31,16 C31,14.3431458 29.6568542,13 28,13 C26.3431458,13 25,14.3431458 25,16 C25,17.6568542 26.3431458,19 28,19 Z" id="more"></path>
+            </g>
+        </g>
+    </g>
+</svg>

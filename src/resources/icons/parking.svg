@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.1 (35376) - http://www.bohemiancoding.com/sketch -->
+    <title>parking</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Átomos" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Iconos" transform="translate(-141.000000, -4490.000000)" fill="#666666">
+            <g id="ico-parking" transform="translate(141.000000, 4490.000000)">
+                <path d="M15.9992197,2.00011148 C8.26609442,2.00011148 2,8.26741724 2,16.0001115 C2,23.7312451 8.26765509,30.0001115 16.0007803,30.0001115 C23.7307842,30.0001115 30,23.7312451 30,16.0001115 C30,8.26741724 23.7292236,2.00011148 15.9992197,2.00011148 L15.9992197,2.00011148 Z M13.7701672,10.1830572 L13.7701672,14.2446976 L19.4185081,14.2446976 L19.4185081,16.3007367 L13.7701672,16.3007367 L13.7701672,21.936234 L20.9508033,21.936234 L20.9508033,23.9646198 L11.1915896,23.9646198 L11.1915893,8.14291632 L20.8971236,8.14291632 L20.8971235,10.1830572 L13.7701672,10.1830572 Z" id="parking"></path>
+            </g>
+        </g>
+    </g>
+</svg>

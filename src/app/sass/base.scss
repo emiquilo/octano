@@ -1,0 +1,121 @@
+@import "compass/css3";
+
+body {
+  background-color: #eee;
+}
+
+.eva-3-container {
+  width: 1024px;
+  padding: 90px 0 0 0 !important;
+  position: relative;
+}
+
+body::after {
+  content: "";
+  background: url(../resources/images/pic1.jpg);
+  background-repeat: round;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  opacity: 0.1;
+  z-index: -1;
+  width: 100%;
+  display: block;
+}
+
+.persons li {
+	cursor: pointer;
+}
+
+.search-result:hover {
+  color: #eee;
+  background-color: #607D8B;
+}
+
+/*PASOS*/
+
+.steps {
+  padding: 0 20px;
+}
+
+.eva-3-cluster-basic {
+  margin: 0;
+}
+
+.eva-3-cluster-basic .cluster-content {
+  margin-right: 0;
+}
+
+.eva-3-cluster-basic .cluster-header, .eva-3-cluster-basic .cluster-header{
+  border-bottom: solid 1px #ccc;
+  padding: 5px 10px;
+  position: relative;
+}
+
+.eva-3-cluster-basic .cluster-header span[class^="eva-3-icon-"] {
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  font-size: 18px;
+  background:rgba(123, 120, 126, .8);
+  bottom: 1px;
+  padding: 5px;
+  color: white;
+}
+
+.eva-3-cluster-basic .cluster-description {
+    box-sizing: border-box;
+    height: auto;
+    padding: 15px;
+}
+
+.profile.active .cluster-description, .user-data-sheet .cluster-description{
+  padding: 15px 15px 50px;
+}
+
+.product-list .cluster-description {
+  height: auto;
+  padding:0;
+}
+
+.eva-3-cluster-basic .cluster-description ul li {
+  padding: 5px;
+}
+
+.product-list .cluster-description ul li:not(:nth-child(1)){
+  border-top: solid 1px #ccc;
+}
+
+.users-ctn .persons .eva-3-cluster-basic .cluster-description {
+  height: 150px;
+  padding: 10px;
+}
+
+.users-ctn .persons .eva-3-cluster-basic .cluster-container {
+  border-radius: 5px;
+}
+
+.add-person .eva-3-cluster-basic .cluster-description > div {
+  margin-bottom: 10px;
+}
+
+.users-ctn .persons .eva-3-cluster-basic .cluster-description .eva-3-btn, .eva-3-cluster-basic .cluster-description .eva-3-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+
+.eva-3-cluster-basic {
+  margin-top: 15px;
+}
+
+.persons .eva-3-cluster-basic {
+  margin-top: 0;
+}
+// Component
+@import "header";
+// Views
+@import "dashboard";
+@import "detail";
+@import "user";

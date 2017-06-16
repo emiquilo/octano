@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>edit</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Átomos" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="03_Iconos" transform="translate(-559.000000, -478.000000)" fill="#666666">
+            <g id="ico-edit" transform="translate(559.000000, 478.000000)">
+                <path d="M29.1572778,29.2673333 L22.3190556,27.9871111 L27.8669444,22.3614444 L29.1572778,29.2673333 L29.1572778,29.2673333 Z M2.55416667,5.23322222 L5.02905556,2.728 C5.98883333,1.75733333 7.54127778,1.75733333 8.50183333,2.728 L10.8717222,5.12822222 L5.31838889,10.7562222 L2.55416667,7.95 C1.81527778,7.20022222 1.81527778,5.98844444 2.55416667,5.23322222 L2.55416667,5.23322222 Z M12.3191667,6.592 L6.76505556,12.2192222 L20.8140556,26.4611111 L26.3619444,20.8346667 L12.3191667,6.592 L12.3191667,6.592 Z" id="edit" transform="translate(16.000000, 16.000000) rotate(-270.000000) translate(-16.000000, -16.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

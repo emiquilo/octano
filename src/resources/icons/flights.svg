@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7 (28169) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_research_flight</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Átomos" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="03_Iconos" transform="translate(-200.000000, -295.000000)" fill="#666666">
+            <g id="flights" transform="translate(200.000000, 295.000000)">
+                <path d="M1,11.7132823 L1.74977473,10.9904568 L3.94573419,11.2143219 L7.42511588,6.99583844 L1.09338831,4.03142659 L2.50755418,3.06285638 L9.80785195,4.67180359 C9.80785195,4.67180359 13.8315541,1.01098175 14.8321431,1.99822962 C15.8327322,2.98574432 12.033162,6.8864407 12.033162,6.8864407 L13.2792289,13.8025123 L12.3560188,15.1312945 L9.65042594,9.23182146 L5.26651175,12.5591136 L5.43994718,14.7524048 L4.67683126,15.4915066 L3.4627832,12.9940363 L1,11.7132823" id="Vuelos---Flights"></path>
+            </g>
+        </g>
+    </g>
+</svg>

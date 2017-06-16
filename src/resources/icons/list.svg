@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.1 (35376) - http://www.bohemiancoding.com/sketch -->
+    <title>list</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Átomos" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Iconos" transform="translate(-295.000000, -3159.000000)" fill="#666666">
+            <g id="ico-list" transform="translate(295.000000, 3159.000000)">
+                <path d="M3,5 L9,5 L9,9 L3,9 L3,5 Z M12,5 L29,5 L29,9 L12,9 L12,5 Z M3,14 L9,14 L9,18 L3,18 L3,14 Z M12,14 L29,14 L29,18 L12,18 L12,14 Z M3,23 L9,23 L9,27 L3,27 L3,23 Z M12,23 L29,23 L29,27 L12,27 L12,23 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

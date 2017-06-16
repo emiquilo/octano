@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>mail</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Átomos" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="03_Iconos" transform="translate(-191.000000, -676.000000)" fill="#666666">
+            <g id="ico-mail" transform="translate(191.000000, 676.000000)">
+                <g id="mail" transform="translate(2.000000, 7.000000)">
+                    <polygon id="Triangle" transform="translate(14.000000, 4.750000) scale(1, -1) translate(-14.000000, -4.750000) " points="14 0 26.25 9.5 1.75 9.5"></polygon>
+                    <path d="M0,1.72727273 L14,12.0909091 L28,1.72727273 L28,17.2487441 C28,18.215936 27.221896,19 26.2484746,19 L1.7515254,19 C0.784184634,19 0,18.2129433 0,17.2487441 L0,1.72727273 Z" id="Rectangle-2"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

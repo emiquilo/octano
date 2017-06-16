@@ -1,0 +1,46 @@
+.eva-3-container .header {
+  margin: 0;
+  height: 65px;
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0px;
+  padding: 0 20px;
+  z-index: 999;
+  box-shadow: 0px 2px 5px #ddd;
+}
+
+.eva-3-container .header h1 {
+  float: right;
+  padding: 15px 25px 0 0;
+}
+
+.eva-3-container .header h1 a {
+  color: black;
+  text-decoration: none;
+}
+
+.eva-3-container .header h1 a span {
+  display: block;
+}
+
+.eva-3-container .header h1 a span.text {
+  font-size: 13px;
+}
+
+.eva-3-container .header h1 .logo {
+    background-image: url(../resources/images/pistons-cross.svg);
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+    right: 35px;
+    top: -32px;
+}
+
+.eva-3-container .header nav {
+  float: left;
+  width: 40%;
+}

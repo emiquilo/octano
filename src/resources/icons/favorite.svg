@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>favorite</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Átomos" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="03_Iconos" transform="translate(-455.000000, -478.000000)" fill="#666666">
+            <g id="favorite" transform="translate(455.000000, 478.000000)">
+                <path d="M29.7624434,11.5636364 C29.7624434,19.2927273 16.1312217,28.5 16.1312217,28.5 C16.1312217,28.5 2.5,19.2927273 2.5,11.5636364 L2.5,11.4981818 C2.5,7.63636364 5.55339367,4.5 9.31561086,4.5 C12.2545023,4.5 15.040724,6.41454545 16.1257692,9.09272727 C17.216267,6.41454545 20.0079412,4.5 22.9468326,4.5 C26.7090498,4.5 29.7624434,7.63636364 29.7624434,11.4981818 L29.7624434,11.5636364" id="Favorite"></path>
+            </g>
+        </g>
+    </g>
+</svg>

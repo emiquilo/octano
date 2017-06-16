@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7 (28169) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_research_location</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Átomos" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="03_Iconos" transform="translate(-226.000000, -295.000000)" fill="#666666">
+            <g id="location" transform="translate(226.000000, 295.000000)">
+                <path d="M13,5.65452374 C13,3.088086 10.7605255,1 8.00149298,1 C5.24246044,1 3,3.088086 3,5.65452374 C3,6.5091072 3.25082114,7.29650642 3.67482831,7.98447298 L8.00149298,15.3290534 L12.3341296,7.98447298 L12.3251717,7.98447298 C12.7521648,7.29650642 13,6.5091072 13,5.65452374 L13,5.65452374 Z M8.00149298,7.03851896 C6.84293819,7.03851896 5.89937295,6.15974918 5.89937295,5.0874888 C5.89937295,4.00447895 6.84293819,3.12570917 8.00149298,3.12570917 C9.16004778,3.12570917 10.1006271,4.00447895 10.1006271,5.0874888 C10.1006271,6.15974918 9.16004778,7.03851896 8.00149298,7.03851896 L8.00149298,7.03851896 Z" id="Ubicación---Marker"></path>
+            </g>
+        </g>
+    </g>
+</svg>

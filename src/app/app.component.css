@@ -1,0 +1,45 @@
+h1 {
+  font-size: 1.2em;
+  color: #999;
+  margin-bottom: 0;
+}
+h2 {
+  font-size: 2em;
+  margin-top: 0;
+  padding-top: 0;
+}
+nav a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+}
+nav a:visited, a:link {
+  color: #222;
+}
+nav a:hover {
+  color: #222;
+}
+
+nav a.active {
+  color: #333;
+  box-shadow:inset 0px 2px 5px #ddd;
+}
+
+.eva-3-sub-nav .sub-nav-item {
+  float: left;
+  height: initial;
+  background-color: transparent;
+}
+.eva-3-sub-nav .sub-nav-item a {
+  width: 100%;
+}
+
+.eva-3-sub-nav .sub-nav-label {
+  line-height: 35px;
+}
+.header {
+  margin-bottom: 20px;
+}

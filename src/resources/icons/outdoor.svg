@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>outdoor</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Átomos" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="03_Iconos" transform="translate(-667.000000, -1263.000000)" fill="#666666">
+            <g id="ico-aire-libre" transform="translate(667.000000, 1263.000000)">
+                <path d="M5.63316151,12.0715385 C4.18016361,12.0715385 3.00487179,10.9364103 3.00487179,9.53333333 C3.00487179,8.13512821 4.18016361,7 5.63316151,7 C7.0861594,7 8.26641026,8.13512821 8.26641026,9.53333333 C8.26641026,10.9364103 7.0861594,12.0715385 5.63316151,12.0715385 Z M18.4533333,7.67230769 L13.1284615,16.3928205 L10.6292308,12.7535897 L3,26 L28.8205128,26 L18.4533333,7.67230769 Z" id="aire-libre"></path>
+            </g>
+        </g>
+    </g>
+</svg>

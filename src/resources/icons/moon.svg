@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.1 (35376) - http://www.bohemiancoding.com/sketch -->
+    <title>moon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Átomos" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Iconos" transform="translate(-442.000000, -3728.000000)">
+            <g id="ico-download-copy" transform="translate(432.000000, 3728.000000)"></g>
+            <path d="M458.818462,3757.46154 C463.618462,3757.46154 467.803077,3754.74154 470,3750.71077 C468.473846,3751.64 466.701538,3752.16923 464.806154,3752.16923 C459.138462,3752.16923 454.547692,3747.43077 454.547692,3741.58462 C454.547692,3736.74769 457.692308,3732.66769 461.981538,3731.40615 C460.972308,3731.14154 459.913846,3731 458.818462,3731 C451.741538,3731 446,3736.92615 446,3744.23077 C446,3751.53538 451.741538,3757.46154 458.818462,3757.46154 Z" id="Night" fill="#666666"></path>
+        </g>
+    </g>
+</svg>
