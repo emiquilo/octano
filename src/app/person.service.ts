@@ -36,6 +36,7 @@ export class PersonService {
 	}
 
 	create(name: string): Promise<Person> {
+		console.log('se agrega a', name);
 		return this.http
 			.post(this.personsUrl, JSON.stringify({name: name}), {headers: this.headers})
 			.toPromise()

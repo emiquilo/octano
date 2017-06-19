@@ -13,6 +13,7 @@ import { PersonService } from './person.service';
 export class PersonsComponent implements OnInit { 
 	persons: Person[];
 	selectedPerson: Person;
+	showCreateUserModal = false;
 
 	constructor(
 		private personService: PersonService,
@@ -22,18 +23,6 @@ export class PersonsComponent implements OnInit {
 		this.personService
 		.getPersons()
 		.then(persons => this.persons = persons);
-	}
-
-	add(name: string): void {
-		name = name.trim();
-
-		if (!name) { return; }
-		
-		this.personService.create(name)
-		.then(person => {
-			this.persons.push(person);
-			this.selectedPerson = null;
-		});
 	}
 
 	delete(person: Person): void {
@@ -69,5 +58,15 @@ export class PersonsComponent implements OnInit {
 		});
 		return services;
 
+	}
+
+	CreateModal() {
+		this.showCreateUserModal = true;
+		console.log(this.showCreateUserModal);
+	}
+
+	addUser(user: any){
+		this.persons.push(user);
+		this.showCreateUserModal = false;
 	}
 }

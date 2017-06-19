@@ -71,7 +71,7 @@
 				<div class="cluster-content">
 					<div class="cluster-header">
 						<p class="eva-3-h5">
-							<a class="eva-3-btn -md -link">
+							<a class="eva-3-btn -md -link" (click)="CreateModal()">
 								<em class="btn-text">Crear un usuario nuevo</em>
 							</a>
 						</p>
@@ -103,3 +103,7 @@
 </div>
 
 <!-- modal para crear usuarios -->
+<create-user
+	[showCreateUserModal]="showCreateUserModal"
+	(onComplete)="addUser($event)"
+></create-user>

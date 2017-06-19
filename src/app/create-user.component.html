@@ -1,5 +1,6 @@
 
-<div class="eva-3-modal create-user -show-modal">
+<!--  active: -show-modal -->
+<div class="eva-3-modal create-user" [class.-show-modal]="showCreateUserModal">
 	
 	<div class="modal-header"><i class="modal-close eva-3-icon-close"></i>
 
@@ -50,7 +51,7 @@
 						<div class="eva-3-input -md">
 							<div class="input-container">
 								<label class="input-label">Marca:</label>
-								<input class="input-tag" #personName />
+								<input class="input-tag" />
 							</div>
 						</div>
 						<div class="eva-3-input -md">
@@ -78,7 +79,7 @@
 						<div class="eva-3-input -md">
 							<div class="input-container">
 								<label class="input-label">Cilindrada:</label>
-								<input class="input-tag" #personName />
+								<input class="input-tag" />
 							</div>
 						</div>
 						<div class="eva-3-input -md">

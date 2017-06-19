@@ -12,6 +12,7 @@ import { InMemoryDataService }  from './in-memory-data.service';
 import { AppComponent }  from './app.component';
 import { DashboardComponent } from './dashboard.component';
 import { PersonsComponent } from './persons.component';
+import { CreateUserComponent } from './create-user.component';
 import { PersonDetailComponent } from './person-detail.component';
 import { PersonService } from './person.service';
 import { PersonSearchComponent } from './person-search.component';
@@ -31,7 +32,8 @@ import { PersonSearchComponent } from './person-search.component';
 		DashboardComponent,
 		PersonDetailComponent,
 		PersonsComponent,
-		PersonSearchComponent
+		PersonSearchComponent,
+		CreateUserComponent
 	],
 
 	providers: [ PersonService ],
