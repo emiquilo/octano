@@ -99,7 +99,6 @@ body::after {
 .users-ctn .persons .eva-3-cluster-basic .cluster-description .eva-3-btn, .eva-3-cluster-basic .cluster-description .eva-3-btn {
   position: absolute;
   bottom: 10px;
-  left: 10px;
 }
 
 .eva-3-cluster-basic {
@@ -112,7 +111,7 @@ body::after {
 
 .eva-3-container .header {
   margin: 0;
-  height: 65px;
+  height: 60px;
   background: white;
   position: fixed;
   top: 0;
@@ -175,10 +174,6 @@ a {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-h3 {
-  margin: 20px 0;
 }
 
 h4 {
@@ -259,8 +254,6 @@ can be found in the LICENSE file at http://angular.io/license
 */
 label {
   display: inline-block;
-  width: 3em;
-  margin: .5em 0;
   color: #607D8B;
   font-weight: bold;
 }
@@ -295,4 +288,70 @@ button:disabled {
 .user-data-sheet .save {
   left: auto;
   right: 10px;
+}
+
+.selected {
+  top: -1px;
+  box-shadow: 0px 1px 5px #999;
+}
+
+.persons {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.persons li {
+  cursor: pointer;
+  position: relative;
+  text-align: left;
+  left: 0;
+  margin: 0 10px 10px 0;
+  display: inline-block;
+  width: 30%;
+  vertical-align: text-top;
+}
+
+.persons .text {
+  position: relative;
+  top: -3px;
+}
+
+.persons .badge {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color: #607D8B;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  height: 1.8em;
+  margin-right: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+button {
+  font-family: Arial;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+}
+
+button:hover {
+  background-color: #cfd8dc;
+}
+
+.create-user .modal-content .eva-3-input {
+  margin-bottom: 10px;
+}
+
+.add-user-btn .eva-3-btn {
+  height: initial;
+  line-height: normal !important;
+  vertical-align: middle;
 }
