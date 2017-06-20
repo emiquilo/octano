@@ -11,7 +11,7 @@ import { PersonService } from './person.service';
 
 export class CreateUserComponent implements OnInit {
 	persons: Person[] = [];
-	@Input() showCreateUserModal = false;
+	@Input() showCreateUserModal: Boolean;
 	@Output() onComplete = new EventEmitter<any>();
 
 	constructor(private personService: PersonService){}
@@ -21,12 +21,18 @@ export class CreateUserComponent implements OnInit {
 		.then(persons => this.persons = persons);
 	}
 
-	add(name: string): void {
-		name = name.trim();
+	deleteModal(){
+		this.showCreateUserModal = false;
+		console.log("la propiedad que concatena la clase para el modal tiene valor falso | " + + this.showCreateUserModal);
+	}
 
-		if (!name) { return; }
+	add(name: string, lastName: string): void {
+		name = name.trim();
+		lastName = lastName.trim();
+
+		if (!name && !lastName) { return; }
 		
-		this.personService.create(name)
+		this.personService.create(name, lastName)
 		.then(person => {
 			this.onComplete.emit(person);
 		});

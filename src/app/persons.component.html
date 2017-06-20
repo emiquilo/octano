@@ -103,7 +103,7 @@
 </div>
 
 <!-- modal para crear usuarios -->
-<create-user
+<create-user *ngIf="showCreateUserModal"
 	[showCreateUserModal]="showCreateUserModal"
 	(onComplete)="addUser($event)"
 ></create-user>

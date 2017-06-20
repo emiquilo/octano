@@ -2,7 +2,7 @@
 <!--  active: -show-modal -->
 <div class="eva-3-modal create-user" [class.-show-modal]="showCreateUserModal">
 	
-	<div class="modal-header"><i class="modal-close eva-3-icon-close"></i>
+	<div class="modal-header"><i (click)="deleteModal()" class="modal-close eva-3-icon-close"></i>
 
 		<div class="modal-title-container">
 			<h3 class="modal-title eva-3-h4">Crear un usuario nuevo</h3>
@@ -32,7 +32,7 @@
 						<div class="eva-3-input -md">
 							<div class="input-container">
 								<label class="input-label">Apellido:</label>
-								<input class="input-tag" />
+								<input class="input-tag" #personLastName />
 							</div>
 						</div>
 						<div class="eva-3-input -md">
@@ -102,7 +102,7 @@
 				</div>
 			</div>
 		</div>
-		<a class="eva-3-btn -md -secondary" (click)="add(personName.value); personName.value=''"><em class="btn-text">Agregar</em></a>
+		<a class="eva-3-btn -md -secondary" (click)="add(personName.value, personLastName.value);"><em class="btn-text">Agregar</em></a>
 	</div>
 		
 </div>

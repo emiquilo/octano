@@ -35,10 +35,10 @@ export class PersonService {
 			.catch(this.handleError);
 	}
 
-	create(name: string): Promise<Person> {
-		console.log('se agrega a', name);
+	create(name: string, lastName: string): Promise<Person> {
+		console.log('se agrega a', name lastName);
 		return this.http
-			.post(this.personsUrl, JSON.stringify({name: name}), {headers: this.headers})
+			.post(this.personsUrl, JSON.stringify({name: name, lastName: lastName}), {headers: this.headers})
 			.toPromise()
 			.then(res => res.json().data as Person)
 			.catch(this.handleError);
