@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { Person } from './person';
@@ -13,7 +13,6 @@ import { PersonService } from './person.service';
 export class PersonsComponent implements OnInit { 
 	persons: Person[];
 	selectedPerson: Person;
-	showCreateUserModal: Boolean = false;
 
 	constructor(
 		private personService: PersonService,
@@ -58,15 +57,5 @@ export class PersonsComponent implements OnInit {
 		});
 		return services;
 
-	}
-
-	CreateModal() {
-		this.showCreateUserModal = true;
-		console.log("la propiedad que concatena la clase para el modal tiene valor verdadero | " + " " + this.showCreateUserModal);
-	}
-
-	addUser(user: any){
-		this.persons.push(user);
-		this.showCreateUserModal = false;
 	}
 }

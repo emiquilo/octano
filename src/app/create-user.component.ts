@@ -1,4 +1,4 @@
-import { Component, Input , OnInit, Output, EventEmitter } from '@angular/core';
+import { Component , OnInit } from '@angular/core';
 
 import { Person } from './person';
 import { PersonService } from './person.service';
@@ -11,8 +11,7 @@ import { PersonService } from './person.service';
 
 export class CreateUserComponent implements OnInit {
 	persons: Person[] = [];
-	@Input() showCreateUserModal: Boolean;
-	@Output() onComplete = new EventEmitter<any>();
+	showCreateUserModal: boolean = false;
 
 	constructor(private personService: PersonService){}
 
@@ -23,8 +22,6 @@ export class CreateUserComponent implements OnInit {
 
 	deleteModal(){
 		this.showCreateUserModal = false;
-		console.log("la propiedad que concatena la clase para el modal tiene valor falso | " + + this.showCreateUserModal);
-		return this.showCreateUserModal;
 	}
 
 	add(name: string, lastName: string): void {
@@ -33,9 +30,10 @@ export class CreateUserComponent implements OnInit {
 
 		if (!name && !lastName) { return; }
 		
-		this.personService.create(name, lastName)
+		this.personService.create(name)
 		.then(person => {
-			this.onComplete.emit(person);
+			console.log('usuario creado correctamente');
+			this.showCreateUserModal = false;
 		});
 	}
 }
