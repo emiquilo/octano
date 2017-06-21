@@ -10,7 +10,7 @@ export class PersonService {
 	private headers = new Headers({'Content-Type': 'application/json'});
 	private personsUrl = 'api/persons';
 
-	constructor(private http: Http){};	
+	constructor(private http: Http){}
 	 
 	getPersons(): Promise<Person[]> {
 		return this.http.get(this.personsUrl)
@@ -36,9 +36,9 @@ export class PersonService {
 	}
 
 	create(name: string, lastName: string): Promise<Person> {
-		console.log('se agrega a', name lastName);
+		console.log('se agrega a', name, lastName);
 		return this.http
-			.post(this.personsUrl, JSON.stringify({name: name, lastName: lastName}), {headers: this.headers})
+			.post(this.personsUrl, JSON.stringify({name: name}), {headers: this.headers})
 			.toPromise()
 			.then(res => res.json().data as Person)
 			.catch(this.handleError);

@@ -24,6 +24,7 @@ export class CreateUserComponent implements OnInit {
 	deleteModal(){
 		this.showCreateUserModal = false;
 		console.log("la propiedad que concatena la clase para el modal tiene valor falso | " + + this.showCreateUserModal);
+		return this.showCreateUserModal;
 	}
 
 	add(name: string, lastName: string): void {

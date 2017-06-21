@@ -13,7 +13,7 @@ import { PersonService } from './person.service';
 export class PersonsComponent implements OnInit { 
 	persons: Person[];
 	selectedPerson: Person;
-	@Input() showCreateUserModal: Boolean = false;
+	showCreateUserModal: Boolean = false;
 
 	constructor(
 		private personService: PersonService,
