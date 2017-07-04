@@ -30,7 +30,7 @@ export class CreateUserComponent implements OnInit {
 
 		if (!name && !lastName) { return; }
 		
-		this.personService.create(name)
+		this.personService.create(name, lastName)
 		.then(person => {
 			console.log('usuario creado correctamente');
 			this.showCreateUserModal = false;

@@ -3,44 +3,33 @@ import { Component } from '@angular/core';
 @Component({
 	selector: 'my-app',
 	template: `
-		<div class="eva-3-container">
-			<div class="header">
-				<h1>
-					<a routerLink="/">
-						<span>{{title}}</span>
-						<span class="text">mecanica integral de motos</span>
-						<span class="logo"></span>
-					</a>
-				</h1>
+		<nav class="header navbar navbar-toggleable-md navbar-inverse bg-inverse">
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<a class="navbar-brand" href="/">
+			<span class="logo"></span>
+				<span>Alto Octanaje</span>
+				<span class="navbar-text">mecanica integral de motos</span>
+			</a>
 
-				<nav class="eva-3-sub-nav -first">
-					<div class="sub-nav-container">
-						<div class="sub-nav-items-container">
-							<li class="sub-nav-item">
-								<a routerLink="/clientes" routerLinkActive="active">
-									<label class="sub-nav-label -md">Clientes</label>
-								</a>
-							</li>
-							<!-- TODO -->
-							<!--<li class="sub-nav-item">
-								<a routerLink="/tecnicos" routerLinkActive="active">
-									<label class="sub-nav-label -md">Tecnicos</label>
-								</a>
-							</li>-->
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" routerLink="/clientes" routerLinkActive="active">Clientes <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+					</li>
+				</ul>
 
-							<li class="sub-nav-item">
-								<a routerLink="/dashboard" routerLinkActive="active">
-									<label class="sub-nav-label -md">Dashboard</label>
-								</a>
-							</li>
-						</div>
-					</div>
-				</nav>
+				<person-search></person-search>
+
 			</div>
-			<router-outlet></router-outlet>
-		</div>
-	`,
-	styleUrls: ['./app.component.css'],
+		</nav>
+		<router-outlet></router-outlet>
+
+	`
 })
 
 export class AppComponent {

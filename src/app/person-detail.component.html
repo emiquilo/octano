@@ -1,53 +1,74 @@
-<div class="eva-3-cluster-basic user-data-sheet" *ngIf="person">
-	
-	<div class="cluster-container">
-		<div class="cluster-content">
-			<div class="cluster-header">
-				<p class="eva-3-h5">Ficha técnica</p>
-				<span class="eva-3-icon-booking"></span>
-			</div>
-			<div class="cluster-description">
-				
-				<div class="eva-3-row">
-					<div class="col -sm-12 -lg-4">
-						<p class="eva-3-h5 -eva-3-bold">Datos del Usuario</p>
-						<p class="eva-3-p">Nombre Completo: {{ person.name + ' ' + person.lastName }}</p>					
-						<p class="eva-3-p">Telefono de contacto: {{ person.phone }}</p>					
-						<p class="eva-3-p">Tipo de usuario: {{ person.type }}</p>					
-					</div>
-					<div class="col -sm-12 -lg-4">
-						<p class="eva-3-h5 -eva-3-bold">Datos del rodado</p>
-						<p class="eva-3-p">Componente tabs para separar los datos tecnicos / sistema electrico de la moto / ultimo tab para ver las partes mecanicas en detalle (relacion directa para trabajar con el diagrama de distribución)</p>				
-					</div>
-					<div class="col -sm-12 -lg-4">
-						<p class="eva-3-h5 -eva-3-bold">Diagrama de distribución OTTO</p>
-						<img src="resources/images/diagrama.jpg" width="300px" alt="">				
-					</div>
-				</div>
-				<div class="eva-3-row">
-					<div class="col -sm-12 -lg-12">
-						<p class="eva-3-h5 -eva-3-bold">Historial de servicios</p>
-						<p class="eva-3-p">Generar una linea de tiempo con los servicios realizados, tener un desplegable para ver en detalle cada uno de los servicios.</p>	
-						<ul>
-							<li>
-								<p class="eva-3-p">- Servicio [x]</p>
-							</li>
-							<li>
-								<p class="eva-3-p">- Servicio [x]</p>
-							</li>
-							<li>
-								<p class="eva-3-p">- Servicio [x]</p>
-							</li>
-							<li>
-								<p class="eva-3-p">- Servicio [x]</p>
-							</li>
-						</ul>
-					</div>
-				</div>
+<div class="container user-data-sheet" *ngIf="person">
+	<div class="cluster-header">
+		<h4>Ficha técnica</h4>
+		<hr>
+		<span class="eva-3-icon-booking"></span>
+	</div>
+	<div class="cluster-description">
 
-				<a (click)="goBack()" class="eva-3-btn back -md -default"><em class="btn-text">Atrás</em></a>
-				<a (click)="save()" class="eva-3-btn save -md -default"><em class="btn-text">Guardar</em></a>
+		<div class="row">
+			<div class="col-lg-4 card user-details">
+				<div class="user-image">
+					<img src="http://via.placeholder.com/150x150" alt="" class="rounded-circle">
+				</div>
+				<div class="user-info-block">
+					<div class="user-heading">
+						<p >{{ person.name + ' ' + person.lastName }}</p>
+						<p>{{ person.phone }}</p>
+						<p>{{ person.type }}</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-8">
+				<div class="bs-callout bs-callout-danger">
+					<div class="list-group">
+						<!--  active -->
+					  <a class="list-group-item list-group-item-action flex-column align-items-start">
+					    <div class="d-flex w-100 justify-content-between">
+					      <h5 class="mb-1">Modelo moto</h5>
+					      <small>Ultima Intervención: 3 días</small>
+					    </div>
+					    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+					    <small>Donec id elit non mi porta.</small>
+					  </a>
+					</div>
+				</div>
 			</div>
 		</div>
+
+		<div class="row">
+			<div class="col-lg-8 timeline">
+				<h5>Historial de servicios</h5>
+				<hr>
+				<p>Generar una linea de tiempo con los servicios realizados, tener un desplegable para ver en detalle cada uno de los servicios.</p>
+				<ul>
+					<li>
+						<p>- Servicio [x]</p>
+					</li>
+					<li>
+						<p>- Servicio [x]</p>
+					</li>
+					<li>
+						<p>- Servicio [x]</p>
+					</li>
+					<li>
+						<p>- Servicio [x]</p>
+					</li>
+				</ul>
+			</div>
+
+			<div class="col-lg-4 card chart">
+		    <img class="card-img-top rounded-top"  width="300px" src="resources/images/diagrama.jpg">
+		    <div class="card-block">
+		      <h5 class="card-title">Diagrama de distribución OTTO</h5>
+		      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+		    </div>
+		    <div class="card-footer">
+		      <small class="text-muted">Ultima actualización: 3 días atras</small>
+		    </div>
+			</div>
+		</div>
+
+		<a (click)="goBack()" class="btn btn-secondary btn-md back"><em class="btn-text">Atrás</em></a>
 	</div>
 </div>

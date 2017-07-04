@@ -2,12 +2,6 @@ body {
   background-color: #eee;
 }
 
-.eva-3-container {
-  width: 1024px;
-  padding: 90px 0 0 0 !important;
-  position: relative;
-}
-
 body::after {
   content: "";
   background: url(../resources/images/pic1.jpg);
@@ -19,6 +13,11 @@ body::after {
   z-index: -1;
   width: 100%;
   display: block;
+}
+
+.container {
+  margin-top: 40px;
+  margin-bottom: 50px;
 }
 
 .persons li {
@@ -35,135 +34,49 @@ body::after {
   padding: 0 20px;
 }
 
-.eva-3-cluster-basic {
-  margin: 0;
-}
-
-.eva-3-cluster-basic .cluster-content {
-  margin-right: 0;
-}
-
-.eva-3-cluster-basic .cluster-header, .eva-3-cluster-basic .cluster-header {
-  border-bottom: solid 1px #ccc;
-  padding: 5px 10px;
+.navbar-brand {
   position: relative;
+  padding-left: 30px;
+  margin-right: 4rem;
 }
 
-.eva-3-cluster-basic .cluster-header span[class^="eva-3-icon-"] {
-  position: absolute;
-  right: 1px;
-  top: 1px;
-  font-size: 18px;
-  background: rgba(123, 120, 126, 0.8);
-  bottom: 1px;
-  padding: 5px;
-  color: white;
-}
-
-.eva-3-cluster-basic .cluster-description {
-  box-sizing: border-box;
-  height: auto;
-  padding: 15px;
-}
-
-.profile.active .cluster-description, .user-data-sheet .cluster-description {
-  padding: 15px 15px 50px;
-}
-
-.product-list .cluster-description {
-  height: auto;
+.navbar-text {
+  display: block;
+  font-size: 13px;
   padding: 0;
 }
 
-.eva-3-cluster-basic .cluster-description ul li {
-  padding: 5px;
+.header {
+  z-index: 999999;
 }
 
-.product-list .cluster-description ul li:not(:nth-child(1)) {
-  border-top: solid 1px #ccc;
-}
-
-.users-ctn .persons .eva-3-cluster-basic .cluster-description {
-  height: 150px;
-  padding: 10px;
-}
-
-.users-ctn .persons .eva-3-cluster-basic .cluster-container {
-  border-radius: 5px;
-}
-
-.add-person .eva-3-cluster-basic .cluster-description > div {
-  margin-bottom: 10px;
-}
-
-.users-ctn .persons .eva-3-cluster-basic .cluster-description .eva-3-btn, .eva-3-cluster-basic .cluster-description .eva-3-btn {
-  position: absolute;
-  bottom: 10px;
-}
-
-.eva-3-cluster-basic {
-  margin-top: 15px;
-}
-
-.persons .eva-3-cluster-basic {
-  margin-top: 0;
-}
-
-.eva-3-container .header {
-  margin: 0;
-  height: 60px;
-  background: white;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0px;
-  padding: 0 20px;
-  z-index: 999;
-  box-shadow: 0px 2px 5px #ddd;
-}
-
-.eva-3-container .header h1 {
-  float: right;
-  padding: 15px 25px 0 0;
-}
-
-.eva-3-container .header h1 a {
-  color: black;
-  text-decoration: none;
-}
-
-.eva-3-container .header h1 a span {
-  display: block;
-}
-
-.eva-3-container .header h1 a span.text {
-  font-size: 13px;
-}
-
-.eva-3-container .header h1 .logo {
+.header .logo {
   background-image: url(../resources/images/pistons-cross.svg);
   background-repeat: no-repeat;
   width: 30px;
   height: 30px;
   display: inline-block;
+  position: absolute;
+  left: -5px;
+  top: 10px;
+}
+
+#search-component {
   position: relative;
-  right: 35px;
-  top: -32px;
 }
-
-.eva-3-container .header nav {
-  float: left;
-  width: 40%;
+#search-component .search-result {
+  position: absolute;
+  top: 115%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border-radius: 4px;
 }
-
-[class*='col-'] {
-  float: left;
-  padding-right: 20px;
-  padding-bottom: 20px;
+#search-component .search-result li {
+  cursor: pointer;
 }
-
-[class*='col-']:last-of-type {
-  padding-right: 0;
+#search-component .search-result li:hover {
+  color: black;
 }
 
 a {
@@ -252,42 +165,37 @@ Copyright 2017 Google Inc. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 */
-label {
-  display: inline-block;
-  color: #607D8B;
-  font-weight: bold;
+.user-data-sheet .btn.btn-secondary {
+  position: inherit;
+  bottom: 0;
+}
+.user-data-sheet .btn.btn-secondary.save {
+  left: 100px;
 }
 
-input {
-  height: 2em;
-  font-size: 1em;
-  padding-left: .4em;
+.user-details {
+  position: relative;
+  margin-top: 70px;
+  padding: 90px 0 0 0;
+  text-align: center;
+}
+.user-details .user-image {
+  text-align: center;
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  margin-left: -75px;
 }
 
-button {
+.chart {
+  padding: 0;
+}
+.chart .card-img-top {
+  margin: 0 auto;
+}
+
+.timeline {
   margin-top: 20px;
-  font-family: Arial;
-  background-color: #eee;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  cursor: hand;
-}
-
-button:hover {
-  background-color: #cfd8dc;
-}
-
-button:disabled {
-  background-color: #eee;
-  color: #ccc;
-  cursor: auto;
-}
-
-.user-data-sheet .save {
-  left: auto;
-  right: 10px;
 }
 
 .selected {
@@ -295,63 +203,61 @@ button:disabled {
   box-shadow: 0px 1px 5px #999;
 }
 
-.persons {
-  list-style-type: none;
+.btn {
+  position: absolute;
+  bottom: 20px;
+  cursor: pointer;
+}
+.btn.btn-danger {
+  right: 20px;
+  color: white !important;
+}
+.btn.btn-secondary {
+  left: 20px;
+  bottom: 20px;
+}
+
+.user {
+  padding: 0 3px 3px 0;
+}
+.user .d-block {
+  font-size: 13px;
+  padding: 5px;
+}
+.user hr {
+  margin: 0 0 5px 0;
+}
+.user .card {
+  min-height: 250px;
+}
+.user .card p {
+  margin: 0;
+}
+.user .card .card-block {
+  padding: 10px 15px;
+}
+.user .card .card-block .card-title, .user .card .card-block .card-text {
+  margin: 0;
+}
+
+.amount-task {
+  margin-top: 15px;
+  padding: 0 15px 0 0;
+}
+.amount-task .card-block {
   padding: 0;
-  text-align: center;
+}
+.amount-task table {
+  margin: 0;
 }
 
-.persons li {
-  cursor: pointer;
-  position: relative;
-  text-align: left;
-  left: 0;
-  margin: 0 10px 10px 0;
-  display: inline-block;
-  width: 30%;
-  vertical-align: text-top;
+.products {
+  margin-top: 15px;
+  padding: 0 0 0 15px;
 }
 
-.persons .text {
-  position: relative;
-  top: -3px;
-}
-
-.persons .badge {
-  display: inline-block;
-  font-size: small;
-  color: white;
-  padding: 0.8em 0.7em 0 0.7em;
-  background-color: #607D8B;
-  line-height: 1em;
-  position: relative;
-  left: -1px;
-  top: -4px;
-  height: 1.8em;
-  margin-right: 0;
-  border-radius: 4px 0 0 4px;
-}
-
-button {
-  font-family: Arial;
-  background-color: #eee;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  cursor: hand;
-}
-
-button:hover {
-  background-color: #cfd8dc;
-}
-
-.create-user .modal-content .eva-3-input {
-  margin-bottom: 10px;
-}
-
-.add-user-btn .eva-3-btn {
-  height: initial;
-  line-height: normal !important;
-  vertical-align: middle;
+@media (max-width: 767px) {
+  .products, .amount-task {
+    padding: 0;
+  }
 }

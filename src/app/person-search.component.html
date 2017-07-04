@@ -1,11 +1,11 @@
 <!-- searchbox -->
-<div id="search-component" class="eva-3-input -md">
-	<div class="input-container">
-		<input #searchBox class="input-tag" type="text" id="searchBox" (keyup)="search(searchBox.value)" placeholder="Bucar usuario:" />
-		<div>
-			<div *ngFor="let person of persons | async" (click)="gotoDetail(person)" class="search-result">
+<form id="search-component" class="form-inline my-2 my-lg-0">
+	<input #searchBox class="form-control mr-sm-2" type="text" (keyup)="search(searchBox.value)" placeholder="Bucar usuario:">
+	<div>
+		<ul class="search-result">
+			<li *ngFor="let person of persons | async" (click)="gotoDetail(person)">
 				{{ person.name }}
-			</div>
-		</div>
+			</li>
+		</ul>
 	</div>
-</div>
+</form>

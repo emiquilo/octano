@@ -1,91 +1,114 @@
-<div class="eva-3-row">
-	<div class="users-ctn col -lg-8">
+<div class="container">
+	<div class="row">
+		<div class="users-ctn col-lg-12">
+			<h3>Perfiles de usuarios</h3>
+			<hr>
+			<div class="row">
+				<!-- Listado de usuarios -->
+				<div class="user col-lg-3" *ngFor="let person of persons">
+					<!-- Solo podria ser visible cuando se para la tarea por x motivo
 
-		<!-- Listado de usuarios -->
-		<ul class="persons">
-			<li *ngFor="let person of persons" (click)="onSelect(person)" [class.selected]="person === selectedPerson">
-				<div class="eva-3-cluster-basic">
-					<div class="cluster-container">
-						<div class="cluster-content">
-							<div class="cluster-description">
-								<span class="eva-3-h5 -eva-3-bold"> {{person.name + ' '+ person.lastName}} </span>
-								<p class="eva-3-h6 -eva-3-italic">Moto</p>
-								<p class="eva-3-p" *ngFor="let bike of person.motorbikes">- {{ bike.brand + ' ' + bike.cc + 'cc' }}</p>
+					los estados de las tareas pueden ser new, open, pending , closed
 
-								<a class="delete" (click)="delete(person); $event.stopPropagation()" class="eva-3-btn -sm -primary" (click)="add(personName.value); personName.value=''"><em class="btn-text">Eliminar</em></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</li>
-		</ul>
-	</div>
-	
-	<div class="user-detail col -lg-4">
-		
-		<!-- search by name -->
-		<person-search></person-search>
+					<div class="d-block bg-warning">Estado de tareas</div>-->
 
-		<div class="eva-3-cluster-basic profile" [class.active]="selectedPerson">
-			<div class="cluster-container">
-				<div class="cluster-content">
-					<div class="cluster-header">
-						<p class="eva-3-h5">Perfiles de usuarios</p>
-						<span class="eva-3-icon-user"></span>
-					</div>
-					<div class="cluster-description">
-						<!--  -->
-						<div *ngIf="!selectedPerson" class="detail">
-							<p class="eva-3-h5 -eva-3-bold">Importante</p>
-							<p class="eva-3-p">Se verá un resumen del usuario seleccionado mostrando datos mas generales sobre su perfil.
-							De esta manera lo podemos guiar directamente a una ficha técnica, completa, donde podrá ver datos, estadisticas, estados de mantenimientos sobre su rodado.
-							--- (idea poder generar un diagrama de distribución otto) 
-							</p>
-						</div>
-						<!-- Detalle previo de los usuarios -->
-						<div *ngIf="selectedPerson">
-
-							<div>
-								<h3 class="eva-3-h5 -eva-3-bold">{{selectedPerson.name | uppercase}} </h3>
-								<p class="eva-3-p">Es {{selectedPerson.type}} desde: 15/05/2017</p>
-								<p class="eva-3-p">N° motos registradas:  {{selectedPerson.motorbikes.length }}</p>
-								
-								<p *ngFor="let bike of selectedPerson.motorbikes" class="eva-3-p">
-									<span *ngIf="getMotorbikeServices(bike) > 0">
-										N° de servicios aplicados: {{ getMotorbikeServices(bike) }}
-									</span>
-								</p>
-								
-								<p class="eva-3-p">Tipo de mantenimiento más frecuente:  mecánico/eléctrico</p>
-							</div>
-
-							<a (click)="gotoDetail()" class="eva-3-btn -md -secondary" (click)="add(personName.value); personName.value=''"><em class="btn-text">Ver ficha completa</em></a>
+					<div class="card" (click)="onSelect(person)" [class.selected]="person === selectedPerson">
+						<div class="card-block">
+							<h5 class="card-title">{{person.name + ' '+ person.lastName}}</h5>
+							<p class="font-weight-bold">Moto</p>
+							<hr>
+							<p class="card-text font-italic" *ngFor="let bike of person.motorbikes">- {{ bike.brand + ' ' + bike.cc + 'cc' }}</p>
+							<!--    -->
+							<a class="btn btn-danger btn-md" (click)="delete(person); $event.stopPropagation()"> X </a>
+							<a class="btn btn-secondary btn-md" (click)="gotoDetail()">Ver ficha</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<!-- modal para crear usuarios -->
-		<create-user></create-user>
-
-		<div class="eva-3-cluster-basic product-list">
-			<div class="cluster-container">
-				<div class="cluster-content">
-					<div class="cluster-header">
-						<p class="eva-3-h5">Tareas Pendientes</p>
-						<span class="eva-3-icon-list"></span>
-					</div>
-					<div class="cluster-description">
-						<ul>
-							<li>
-								<p class="eva-3-p -eva-3-italic">- Service 3000kb - [ rodado del usuario ] -</p>
-							</li>
-						</ul>
-					</div>
+		<div class="amount-task col-lg-6">
+			<h3>Trabajos realizados</h3>
+			<hr>
+			<div class="card text-center">
+			  <div class="card-block">
+					<table class="table table-striped table-bordered">
+					  <thead>
+					    <tr>
+					      <th></th>
+					      <th>Nombre</th>
+					      <th>Intervención</th>
+								<th>precio</th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <th scope="row">1</th>
+					      <td>Facundo</td>
+								<td>Mecanico</td>
+								 <td>$ 500</td>
+					    </tr>
+					    <tr>
+					      <th scope="row">2</th>
+					      <td>Emilio</td>
+								<td>Mecanico</td>
+								 <td>$ 500</td>
+					    </tr>
+					    <tr>
+					      <th scope="row">3</th>
+					      <td>Eda</td>
+								<td>Eléctrico</td>
+								 <td>$ 800</td>
+					    </tr>
+							<tr>
+					      <th scope="row"></th>
+					      <td colspan="3">
+									<span class="d-block text-right font-weight-bold">Total : <span class="d-inline-block">$1800</span></span>
+								</td>
+					    </tr>
+					  </tbody>
+					</table>
+			  </div>
+			  <div class="card-footer text-muted">
+			    ultimos 15 días
+			  </div>
+			</div>
+			<!-- modal para crear usuarios
+			<create-user></create-user>-->
+		</div>
+		<div class="products col-lg-6">
+			<h3>Repuestos</h3>
+			<hr>
+			<div class="card text-center">
+				<div class="card-header">
+			    <ul class="nav nav-tabs card-header-tabs">
+			      <li class="nav-item">
+			        <a class="nav-link active">Mantenimiento</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link disabled">Mecánicos</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link disabled">Electrónicos</a>
+			      </li>
+			    </ul>
+			  </div>
+				<div class="card-block">
+					<ul class="list-group">
+					  <li class="list-group-item list-group-item-action justify-content-between">
+					    Aceite Motul 4t 10w40
+					    <span class="badge badge-default badge-pill">10</span>
+					  </li>
+					  <li class="list-group-item list-group-item-action justify-content-between">
+					    Lubricante Ipone Cadena 750ml
+					    <span class="badge badge-default badge-pill">5</span>
+					  </li>
+					</ul>
+				</div>
+				<div class="card-footer text-muted">
+					<span class="d-block text-right font-weight-bold">Gastos : <span class="d-inline-block">$1700</span></span>
 				</div>
 			</div>
 		</div>
-		
 	</div>
 </div>

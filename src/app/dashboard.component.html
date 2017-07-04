@@ -1,86 +1,68 @@
-<div class="eva-3-row">
-	<div class="col -lg-6 -sm-12">
-		<h3 class="eva-3-h3">Clientes frecuentes</h3>
-		<div class="grid grid-pad persons">
-			<a *ngFor="let person of persons" [routerLink]="['/detalle', person.id]"  class="col-1-4">
-				<div class="module person">
-					<span>{{ person.id }}</span> {{ person.name }}
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12 col-lg-6">
+			<h3>Clientes frecuentes</h3>
+			<div class="grid grid-pad persons">
+				<a *ngFor="let person of persons" [routerLink]="['/detalle', person.id]"  class="col-1-4">
+					<div class="module person">
+						<span>{{ person.id }}</span> {{ person.name }}
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="col-sm-12 col-lg-6">
+			<h3>Info General</h3>
+			<div class="grid grid-pad stats">
+				<div class="module">
+					<span>Usuarios</span>
+					<span class="amount">{{persons.length}}</span>
 				</div>
-			</a>
+				<div class="module">
+					<span>Tareas</span>
+					<span class="amount">X</span>
+				</div>
+				<div class="module">
+					<span>Pendientes</span>
+					<span class="amount">X</span>
+				</div>
+				<div class="module">
+					<span>Ganacias</span>
+					<span class="amount">X</span>
+				</div>
+			</div>
 		</div>
 	</div>
+	<div class="row">
+		<div class="col-sm-12 col-lg-6">
+			<h5>Tareas Pendientes</h5>
+			<span class="eva-3-icon-list"></span>
+			<div class="cluster-description">
+				<ul>
+					<li>
+						<p class="eva-3-p -eva-3-italic">- Service 3000km - [ rodado del usuario ] -</p>
+					</li>
+					<li>
+						<p class="eva-3-p -eva-3-italic">- Service 3000km - [ rodado del usuario ] -</p>
+					</li>
+					<li>
+						<p class="eva-3-p -eva-3-italic">- Service 3000km - [ rodado del usuario ] -</p>
+					</li>
+					<li>
+						<p class="eva-3-p -eva-3-italic">- Service 3000km - [ rodado del usuario ] -</p>
+					</li>
+					<li>
+						<p class="eva-3-p -eva-3-italic">- Service 3000km - [ rodado del usuario ] -</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-sm-12 col-lg-6">
+			<div class="chart">
 
-	<div class="col -lg-6 -sm-12">
-		<h3 class="eva-3-h3">Info General</h3>
-		<div class="grid grid-pad stats">
-			<div class="module">
-				<span>Usuarios</span>
-				<span class="amount">{{persons.length}}</span>
 			</div>
-			<div class="module">
-				<span>Tareas</span>
-				<span class="amount">X</span>
-			</div>
-			<div class="module">
-				<span>Pendientes</span>
-				<span class="amount">X</span>
-			</div>
-			<div class="module">
-				<span>Ganacias</span>
-				<span class="amount">X</span>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="eva-3-row">
-	<div class="col -lg-6 -sm-12">
-		<div class="eva-3-cluster-basic product-list">
-			<div class="cluster-container">
-				<div class="cluster-content">
-					<div class="cluster-header">
-						<p class="eva-3-h5">Tareas Pendientes</p>
-						<span class="eva-3-icon-list"></span>
-					</div>
-					<div class="cluster-description">
-						<ul>
-							<li>
-								<p class="eva-3-p -eva-3-italic">- Service 3000km - [ rodado del usuario ] -</p>
-							</li>
-							<li>
-								<p class="eva-3-p -eva-3-italic">- Service 3000km - [ rodado del usuario ] -</p>
-							</li>
-							<li>
-								<p class="eva-3-p -eva-3-italic">- Service 3000km - [ rodado del usuario ] -</p>
-							</li>
-							<li>
-								<p class="eva-3-p -eva-3-italic">- Service 3000km - [ rodado del usuario ] -</p>
-							</li>
-							<li>
-								<p class="eva-3-p -eva-3-italic">- Service 3000km - [ rodado del usuario ] -</p>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col -lg-6 -sm-12">
-		<h3 class="eva-3-h3"></h3>
-		<div class="chart">
-			
-		</div>
-		<div class="eva-3-cluster-basic">
-			<div class="cluster-container">
-				<div class="cluster-content">
-					<div class="cluster-header">
-						<p class="eva-3-h5">Tipos de trabajo realizados</p>
-						<span class="eva-3-icon-info-circle"></span>
-					</div>
-					<div class="cluster-description">
-						<span>torta grafica representando la cantidad de trabajos electricos y mecanicos!</span>
-					</div>
-				</div>
-			</div>
+			<h5>Tipos de trabajo realizados</h5>
+			<span class="eva-3-icon-info-circle"></span>
+			<span>torta grafica representando la cantidad de trabajos electricos y mecanicos!</span>
 		</div>
 	</div>
 </div>
