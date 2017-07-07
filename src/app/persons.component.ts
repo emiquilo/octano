@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Person } from './person';
-import { Moto } from './person';
+import { User } from './model';
+import { Moto } from './model';
 import { PersonService } from './person.service';
 
 @Component({
@@ -10,9 +10,9 @@ import { PersonService } from './person.service';
 	templateUrl: './persons.component.html',
 })
 
-export class PersonsComponent implements OnInit { 
-	persons: Person[];
-	selectedPerson: Person;
+export class PersonsComponent implements OnInit {
+	persons: User[];
+	selectedPerson: User;
 
 	constructor(
 		private personService: PersonService,
@@ -24,7 +24,7 @@ export class PersonsComponent implements OnInit {
 		.then(persons => this.persons = persons);
 	}
 
-	delete(person: Person): void {
+	delete(person: User): void {
 		this.personService
 		  .delete(person.id)
 		  .then(() => {
@@ -37,7 +37,7 @@ export class PersonsComponent implements OnInit {
 		this.getPersons();
 	}
 
-	onSelect(person: Person): void {
+	onSelect(person: User): void {
 		this.selectedPerson = person;
 	}
 

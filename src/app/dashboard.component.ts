@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Person } from './person';
+import { User } from './model';
 import { PersonService } from './person.service';
 
 
@@ -10,7 +10,7 @@ import { PersonService } from './person.service';
 })
 
 export class DashboardComponent implements OnInit {
-	persons: Person[] = [];
+	persons: User[] = [];
 
 	constructor(private personService: PersonService){}
 

@@ -1,4 +1,4 @@
-export class Person {
+export class User {
 	id: number;
 	name: string;
 	lastName: string;
@@ -13,4 +13,12 @@ export class Moto {
 	kms: number;
 	year: number;
 	serviceHistory: any;
+}
+
+export class Product {
+	name: string;
+	status: boolean;
+	type: any;
+	price: number;
+	amount: number;
 }

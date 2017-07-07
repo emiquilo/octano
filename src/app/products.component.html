@@ -1,0 +1,31 @@
+<h3>Repuestos</h3>
+<hr>
+<div class="card text-center">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+        <a class="nav-link active">Mantenimiento</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled">Mecánicos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled">Electrónicos</a>
+      </li>
+    </ul>
+  </div>
+  <div class="card-block">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-action justify-content-between" *ngFor="let product of products">
+        {{ product.name }}
+        <span class="badge badge-default badge-pill">{{ product.amount }}</span>
+      </li>
+    </ul>
+  </div>
+  <div class="card-footer text-muted">
+    <span class="d-block text-right font-weight-bold">Gastos : <span class="d-inline-block">$1700</span></span>
+  </div>
+  <div class="">
+    <p>agregar producto</p>
+  </div>
+</div>

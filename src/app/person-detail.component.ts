@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { Person } from './person';
+import { User } from './model';
 import { PersonService } from './person.service';
 
 
@@ -13,7 +13,7 @@ import { PersonService } from './person.service';
 })
 
 export class PersonDetailComponent implements OnInit {
-	person: Person;
+	person: User;
 
 	constructor(
 		private personService: PersonService,

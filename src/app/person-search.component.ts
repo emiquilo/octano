@@ -14,7 +14,7 @@ import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 
 import { PersonSearchService } from './person-search.service';
-import { Person } from './person';
+import { User } from './model';
 
 @Component({
 	selector: 'person-search',
@@ -23,7 +23,7 @@ import { Person } from './person';
 })
 
 export class PersonSearchComponent implements OnInit {
-	persons: Observable<Person[]>;
+	persons: Observable<User[]>;
 	private searchTerms = new Subject<string>();
 
 	constructor(
@@ -43,15 +43,15 @@ export class PersonSearchComponent implements OnInit {
 	    // return the http search observable
 	    ? this.personSearchService.search(term)
 	    // or the observable of empty persons if there was no search term
-	    : Observable.of<Person[]>([]))
+	    : Observable.of<User[]>([]))
 	  .catch(error => {
 	    // TODO: add real error handling
 	    console.log(error);
-	    return Observable.of<Person[]>([]);
+	    return Observable.of<User[]>([]);
 	  });
 	}
 
-	gotoDetail(person: Person): void {
+	gotoDetail(person: User): void {
 		let link = ['/detalle', person.id];
 		this.router.navigate(link);
 	}

@@ -1,6 +1,6 @@
 import { Component , OnInit } from '@angular/core';
 
-import { Person } from './person';
+import { User } from './model';
 import { PersonService } from './person.service';
 
 
@@ -10,7 +10,7 @@ import { PersonService } from './person.service';
 })
 
 export class CreateUserComponent implements OnInit {
-	persons: Person[] = [];
+	persons: User[] = [];
 	showCreateUserModal: boolean = false;
 
 	constructor(private personService: PersonService){}
@@ -29,7 +29,7 @@ export class CreateUserComponent implements OnInit {
 		lastName = lastName.trim();
 
 		if (!name && !lastName) { return; }
-		
+
 		this.personService.create(name, lastName)
 		.then(person => {
 			console.log('usuario creado correctamente');

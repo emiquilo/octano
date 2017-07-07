@@ -1,8 +1,10 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
+import { User } from './model';
+
 export class InMemoryDataService implements InMemoryDbService  {
-	
+
 	createDb (){
-		let persons = [
+		let users = [
 			{
 				id: 1,
 				name: 'Facundo',
@@ -101,10 +103,20 @@ export class InMemoryDataService implements InMemoryDbService  {
 					kms:'12600',
 					year: '2015'
 				}]
-
 			}
 		];
-		return {persons};
+
+
+		let products = [
+		{
+			name: "Aaceite Motul 4t 10w40",
+			type: "service",
+			price: 100,
+			amount: 2
+		}
+		];
+
+		return {users , products};
 	}
 
 }
