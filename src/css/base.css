@@ -203,16 +203,16 @@ can be found in the LICENSE file at http://angular.io/license
   box-shadow: 0px 1px 5px #999;
 }
 
-.btn {
+.users-ctn .btn {
   position: absolute;
   bottom: 20px;
   cursor: pointer;
 }
-.btn.btn-danger {
+.users-ctn .btn.btn-danger {
   right: 20px;
   color: white !important;
 }
-.btn.btn-secondary {
+.users-ctn .btn.btn-secondary {
   left: 20px;
   bottom: 20px;
 }
@@ -249,6 +249,13 @@ can be found in the LICENSE file at http://angular.io/license
 }
 .amount-task table {
   margin: 0;
+}
+
+.add-product {
+  margin: 0 20px;
+}
+.add-product .row {
+  margin: 15px -15px;
 }
 
 .products {

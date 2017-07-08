@@ -19,7 +19,6 @@ import { PersonService } from './person.service';
 import { PersonSearchComponent } from './person-search.component';
 
 @NgModule({
-
 	imports: [
  		BrowserModule,
  		FormsModule,
