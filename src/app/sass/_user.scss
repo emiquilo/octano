@@ -55,13 +55,28 @@
 }
 
 .add-product {
-  margin: 0 20px;
-  .row {
-    margin: 15px -15px;
+  margin: 0 15px;
+  .card-header {
+    padding-left: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    h6 {
+      margin: 0
+    }
+    .btn {
+      position: absolute;
+      border-radius: initial;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      border: 0;
+      cursor: pointer;
+      border-left: solid 1px;
+    }
   }
+
 }
 .products {
-  margin-top: 15px;
   padding: 0 0 0 15px;
 }
 

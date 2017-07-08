@@ -1,6 +1,7 @@
 <h3>Repuestos</h3>
 <hr>
 <div class="card text-center">
+<!--
   <div class="card-header">
     <ul class="nav nav-tabs card-header-tabs">
       <li class="nav-item">
@@ -14,6 +15,7 @@
       </li>
     </ul>
   </div>
+-->
   <div class="card-block">
     <ul class="list-group">
       <li class="list-group-item list-group-item-action justify-content-between" *ngFor="let product of products">
@@ -24,8 +26,10 @@
   </div>
   <!-- mostrar el modulo en 2 pasos - así se evita mostrar la pagina muy cargada -->
   <div class="add-product">
-    <h4 class="text-left">Cargar productos</h4>
-    <hr>
+    <div class="card-header">
+      <h6 class="text-left">Productos</h6>
+      <button type="button" class="btn btn-outline-danger">Cargar!</button>
+    </div>
     <div class="form-group">
       <p class="text-left">Escribir el nombre del producto</p>
       <input type="text" class="form-control" placeholder="Nombre del producto">
@@ -36,16 +40,10 @@
         <div class="col col-lg-6">
           <input type="text" class="form-control" placeholder="cantidad">
         </div>
-        <div class="col col-lg-3">
+        <div class="col col-lg-6">
           <input type="text" class="form-control" placeholder="Precio">
-        </div>
-        <div class="col col-lg-3">
-          <button type="button" class="btn btn-primary">Agregar!</button>
         </div>
       </div>
     </div>
-  </div>
-  <div class="card-footer text-muted">
-    <span class="d-block text-right font-weight-bold">Gastos : <span class="d-inline-block">$1700</span></span>
   </div>
 </div>

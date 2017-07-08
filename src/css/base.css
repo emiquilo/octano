@@ -252,14 +252,28 @@ can be found in the LICENSE file at http://angular.io/license
 }
 
 .add-product {
-  margin: 0 20px;
+  margin: 0 15px;
 }
-.add-product .row {
-  margin: 15px -15px;
+.add-product .card-header {
+  padding-left: 10px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.add-product .card-header h6 {
+  margin: 0;
+}
+.add-product .card-header .btn {
+  position: absolute;
+  border-radius: initial;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border: 0;
+  cursor: pointer;
+  border-left: solid 1px;
 }
 
 .products {
-  margin-top: 15px;
   padding: 0 0 0 15px;
 }
 
