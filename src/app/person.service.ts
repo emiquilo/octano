@@ -8,19 +8,19 @@ import { User, Product } from './model';
 @Injectable()
 export class PersonService {
 	private headers = new Headers({'Content-Type': 'application/json'});
-	private personsUrl = 'api/users';
-	private productsUrl = 'api/products';
+	private personsUrl = 'http://lab.concider.net/octano/users';
+	private productsUrl = 'http://lab.concider.net/octano/products';
 
 	constructor(private http: Http){}
 
 	getPersons(): Promise<User[]> {
 		return this.http.get(this.personsUrl)
 			.toPromise()
-			.then(response => response.json().data as User[])
+			.then(response => response.json())
 			.catch(this.handleError);
 	}
 
-	getPerson(id: number): Promise<User> {
+getPerson(id: number): Promise<User> {
 	  const url = `${this.personsUrl}/${id}`;
 	  return this.http.get(url)
 	    .toPromise()
@@ -35,7 +35,6 @@ export class PersonService {
 			.then(() => null)
 			.catch(this.handleError);
 	}
-
 	create(name: string, lastName: string): Promise<User> {
 		console.log('se agrega a', name, lastName);
 		return this.http
