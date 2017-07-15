@@ -7,7 +7,7 @@ import { User, Product } from './model';
 
 @Injectable()
 export class PersonService {
-	private headers = new Headers({'Content-Type': 'application/json'});
+	private headers = new Headers({'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'});
 	private personsUrl = 'http://lab.concider.net/octano/users';
 	private productsUrl = 'http://lab.concider.net/octano/products';
 
@@ -56,7 +56,7 @@ getPerson(id: number): Promise<User> {
 	getProducts(): Promise<Product[]> {
 		return this.http.get(this.productsUrl)
 			.toPromise()
-			.then(response => response.json().data as Product[])
+			.then(response => response.json())
 			.catch(this.handleError);
 	}
 
