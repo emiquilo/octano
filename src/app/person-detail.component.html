@@ -7,7 +7,7 @@
 	<div class="cluster-description">
 
 		<div class="row">
-			<div class="col-lg-4 card user-details">
+			<div class="col-lg-6 card user-details">
 				<div class="user-image">
 					<img src="http://via.placeholder.com/150x150" alt="" class="rounded-circle">
 				</div>
@@ -19,7 +19,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-8">
+			<div class="col-lg-6">
 				<div class="bs-callout bs-callout-danger">
 					<div class="list-group">
 						<!--  active -->
@@ -36,39 +36,24 @@
 			</div>
 		</div>
 
-		<div class="row">
-			<div class="col-lg-8 timeline">
-				<h5>Historial de servicios</h5>
-				<hr>
-				<p>Generar una linea de tiempo con los servicios realizados, tener un desplegable para ver en detalle cada uno de los servicios.</p>
-				<ul>
-					<li>
-						<p>- Servicio [x]</p>
-					</li>
-					<li>
-						<p>- Servicio [x]</p>
-					</li>
-					<li>
-						<p>- Servicio [x]</p>
-					</li>
-					<li>
-						<p>- Servicio [x]</p>
-					</li>
-				</ul>
-			</div>
-
-			<div class="col-lg-4 card chart">
-		    <img class="card-img-top rounded-top"  width="300px" src="resources/images/diagrama.jpg">
-		    <div class="card-block">
-		      <h5 class="card-title">Diagrama de distribución OTTO</h5>
-		      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-		    </div>
-		    <div class="card-footer">
-		      <small class="text-muted">Ultima actualización: 3 días atras</small>
-		    </div>
-			</div>
+		<div class="timeline">
+			<h5>Historial de servicios</h5>
+			<hr>
+			<p>Generar una linea de tiempo con los servicios realizados, tener un desplegable para ver en detalle cada uno de los servicios.</p>
+			<ul>
+				<li>
+					<p>- Servicio [x]</p>
+				</li>
+				<li>
+					<p>- Servicio [x]</p>
+				</li>
+				<li>
+					<p>- Servicio [x]</p>
+				</li>
+				<li>
+					<p>- Servicio [x]</p>
+				</li>
+			</ul>
+			<a (click)="goBack()" class="btn btn-secondary btn-md back"><em class="btn-text">Atrás</em></a>
 		</div>
-
-		<a (click)="goBack()" class="btn btn-secondary btn-md back"><em class="btn-text">Atrás</em></a>
-	</div>
 </div>
