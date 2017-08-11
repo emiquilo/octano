@@ -23,7 +23,7 @@ export class PersonDetailComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.route.params
-		.switchMap((params: Params) => this.personService.getPerson(+params['id']))
+		.switchMap((params: Params) => this.personService.getPersonTemp(+params['id']))
 		.subscribe(person => this.person = person);
 	}
 	save(): void {

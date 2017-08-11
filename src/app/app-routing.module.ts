@@ -6,7 +6,7 @@ import { PersonsComponent } from './persons.component';
 import { PersonDetailComponent } from './person-detail.component';
 
 const routes: Routes = [
-	{ path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+	{ path: '', redirectTo: '/clientes', pathMatch: 'full' },
 	{ path: 'dashboard',  component: DashboardComponent },
 	{ path: 'detalle/:id', component: PersonDetailComponent },
 	{ path: 'clientes',     component: PersonsComponent },

@@ -1,3 +1,7 @@
+/*
+con la sentencia import, se invoca el NgModule	de @angular/core
+el cual contiene los componentes para la aplicacion
+*/
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
@@ -14,6 +18,11 @@ import { ProductsComponent } from './products.component';
 import { PersonDetailComponent } from './person-detail.component';
 import { PersonService } from './person.service';
 import { PersonSearchComponent } from './person-search.component';
+
+/*
+Usando la notacion NgModule se declara un modulo y en el parametro array imports
+se inyectan los modulos necesarios para la app
+*/
 
 @NgModule({
 	imports: [
@@ -38,4 +47,5 @@ import { PersonSearchComponent } from './person-search.component';
 	bootstrap: [ AppComponent ]
 })
 
+/*se define la clase AppModule y la exporto para que sea accesible */
 export class AppModule { }

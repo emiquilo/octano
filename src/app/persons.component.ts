@@ -37,12 +37,8 @@ export class PersonsComponent implements OnInit {
 		this.getPersons();
 	}
 
-	onSelect(person: User): void {
-		this.selectedPerson = person;
-	}
-
-	gotoDetail(): void {
-		this.router.navigate(['/detalle', this.selectedPerson.id]);
+	gotoDetail(index: number): void {
+		this.router.navigate(['/detalle', index]);
 	}
 
 	getMotorbikeServices(bike: Moto): number {
