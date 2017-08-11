@@ -20,18 +20,11 @@ export class PersonService {
 			.catch(this.handleError);
 	}
 
-	getPersonTemp(i: number): Promise<User[]> {
-		return this.http.get(this.personsUrl)
-			.toPromise()
-			.then(response => response.json()[i])
-			.catch(this.handleError);
-	}
-
 getPerson(id: number): Promise<User> {
 	  const url = `${this.personsUrl}/${id}`;
 	  return this.http.get(url)
 	    .toPromise()
-	    .then(response => response.json().data as User)
+	    .then(response => response.json() as User)
 	    .catch(this.handleError);
 	}
 
