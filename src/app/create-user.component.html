@@ -15,102 +15,84 @@
         </button>
       </div>
       <div class="modal-body">
-				<div class="steps">
-					<div class="step">
-						<h3 class="eva-3-h5 -eva-3-bold">Información personal</h3>
-						<div class="eva-3-row">
-							<div class="col -sm-12 -md-6">
-								<div class="eva-3-input -md">
-									<div class="input-container">
-										<label class="input-label">Nombre:</label>
-										<input class="input-tag" #personName />
-									</div>
-								</div>
-								<div class="eva-3-input -md">
-									<div class="input-container">
-										<label class="input-label">telefono de contacto:</label>
-										<input class="input-tag" />
-									</div>
-								</div>
-							</div>
-							<div class="col -sm-12 -md-6">
-								<div class="eva-3-input -md">
-									<div class="input-container">
-										<label class="input-label">Apellido:</label>
-										<input class="input-tag" #personLastName />
-									</div>
-								</div>
-								<div class="eva-3-input -md">
-									<div class="input-container">
-										<label class="input-label">Domicilio:</label>
-										<input class="input-tag" />
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="step">
-						<h3 class="eva-3-h5 -eva-3-bold">Datos del rodado</h3>
-						<div class="eva-3-row">
-							<div class="col -sm-12 -md-4">
-								<div class="eva-3-input -md">
-									<div class="input-container">
-										<label class="input-label">Marca:</label>
-										<input class="input-tag" />
-									</div>
-								</div>
-								<div class="eva-3-input -md">
-									<div class="input-container">
-										<label class="input-label">Versión:</label>
-										<input class="input-tag" />
-									</div>
-								</div>
-							</div>
-							<div class="col -sm-12 -md-4">
-								<div class="eva-3-input -md">
-									<div class="input-container">
-										<label class="input-label">kilómetros:</label>
-										<input class="input-tag" />
-									</div>
-								</div>
-								<div class="eva-3-input -md">
-									<div class="input-container">
-										<label class="input-label">Modelo:</label>
-										<input class="input-tag" />
-									</div>
-								</div>
-							</div>
-							<div class="col -sm-12 -md-4">
-								<div class="eva-3-input -md">
-									<div class="input-container">
-										<label class="input-label">Cilindrada:</label>
-										<input class="input-tag" />
-									</div>
-								</div>
-								<div class="eva-3-input -md">
-									<div class="input-container">
-										<label class="input-label">Tipo:</label>
-										<div class="eva-3-select -md">
-											<div class="select-container">
-												<select id="eva-select" class="select-tag">
-													<option value="" disabled="disabled" class="select-option"> Seleccione una opción</option>
-													<option value="1" class="select-option">Naked / calle </option>
-							      					<option value="2" class="select-option">Enduro</option>
-							      					<option value="3" class="select-option">Cross</option>
-							      					<option value="4" class="select-option">trial</option>
-												</select>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+        <h5 class="font-weight-bold">Información personal</h5>
+
+        <div class="form-group row">
+          <label for="example-text-input" class="col-2 col-form-label">Nombre</label>
+          <div class="col-10">
+            <input class="form-control" type="text" value=" " id="name">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="example-week-input" class="col-2 col-form-label">Teléfono</label>
+          <div class="col-10">
+            <input class="form-control" type="text"  id="phone">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="example-week-input" class="col-2 col-form-label">Domicilio</label>
+          <div class="col-10">
+            <input class="form-control" type="text"  id="address">
+          </div>
+        </div>
+        <h5 class="font-weight-bold">Datos del rodado</h5>
+        <div class="form-group row">
+          <label for="example-week-input" class="col-2 col-form-label">Marca</label>
+          <div class="col-10">
+            <input class="form-control" type="text"  id="Brand">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="example-week-input" class="col-2 col-form-label">Version</label>
+          <div class="col-10">
+            <input class="form-control" type="text"  id="version">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="example-week-input" class="col-2 col-form-label">Version</label>
+          <div class="col-10">
+            <input class="form-control" type="text"  id="version">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="example-week-input" class="col-2 col-form-label">Kmt</label>
+          <div class="col-10">
+            <input class="form-control" type="text"  id="kmt">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="example-week-input" class="col-2 col-form-label">Modelo</label>
+          <div class="col-10">
+            <input class="form-control" type="text"  id="year">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="example-week-input" class="col-2 col-form-label">CC</label>
+          <div class="col-10">
+            <input class="form-control" type="text"  id="year">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="example-week-input" class="col-2 col-form-label">Tipo</label>
+          <div class="col-10">
+            <input class="form-control" type="text"  id="year">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="example-week-input" class="col-2 col-form-label">Tipo</label>
+          <div class="col-10">
+            <select class="form-control" id="exampleSelect1">
+              <option>Naked / calle</option>
+              <option>Enduro</option>
+              <option>Cross</option>
+              <option>trial</option>
+            </select>
+          </div>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Guardar cambios</button>
+        <button type="button" class="btn btn-primary">Crear!</button>
       </div>
     </div>
   </div>

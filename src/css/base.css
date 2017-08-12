@@ -47,7 +47,7 @@ body::after {
 }
 
 .header {
-  z-index: 999999;
+  z-index: 9;
 }
 
 .header .logo {
