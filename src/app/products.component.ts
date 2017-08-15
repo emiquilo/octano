@@ -18,11 +18,16 @@ export class ProductsComponent implements OnInit {
 	getProducts(): void {
 		this.personService
 		.getProducts()
-		.then(products => this.products = products);
+		.then(products => this.products = products)
+		.then(() => this.sumarProductos( this.products ));
+
+	}
+
+	sumarProductos( p ): number{
+		return p.reduce((acumulado, producto) => acumulado + producto.amount, 0);
 	}
 
 	ngOnInit(): void {
 		this.getProducts();
 	}
-
 }
