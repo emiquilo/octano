@@ -23,8 +23,8 @@ export class ProductsComponent implements OnInit {
 
 	}
 
-	sumarProductos( p ): number{
-		return p.reduce((acumulado, producto) => acumulado + producto.amount, 0);
+	sumarProductos( p :any ): number{
+		return p.reduce((acumulado:any, producto:any) => acumulado + producto.amount, 0);
 	}
 
 	ngOnInit(): void {

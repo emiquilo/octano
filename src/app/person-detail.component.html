@@ -7,7 +7,7 @@
 	<div class="cluster-description">
 
 		<div class="row">
-			<div class="col-lg-6 card user-details">
+			<div class="col-lg-3 card user-details">
 				<div class="user-image">
 					<img src="http://via.placeholder.com/150x150" alt="" class="rounded-circle">
 				</div>
@@ -19,7 +19,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-6">
+			<div class="col-lg-9">
 				<div class="bs-callout bs-callout-danger">
 					<div class="list-group">
 						<!--  active -->
@@ -34,26 +34,40 @@
 					</div>
 				</div>
 			</div>
-		</div>
-
-		<div class="timeline">
-			<h5>Historial de servicios</h5>
-			<hr>
-			<p>Generar una linea de tiempo con los servicios realizados, tener un desplegable para ver en detalle cada uno de los servicios.</p>
-			<ul>
-				<li>
-					<p>- Servicio [x]</p>
-				</li>
-				<li>
-					<p>- Servicio [x]</p>
-				</li>
-				<li>
-					<p>- Servicio [x]</p>
-				</li>
-				<li>
-					<p>- Servicio [x]</p>
-				</li>
-			</ul>
-			<a (click)="goBack()" class="btn btn-secondary btn-md back"><em class="btn-text">Atrás</em></a>
+			<div class="col-lg-12">
+				<div class="page-header">
+						<h5 id="timeline">Intervenciones</h5>
+						<hr>
+				</div>
+				<div class="timeline-box">
+					<ul class="timeline">
+							<li>
+								<div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
+								<div class="timeline-panel card">
+									<div class="timeline-heading">
+										<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 horas</small></p>
+										<h4 class="timeline-title">Hola amiguero soy un titulo intervertor</h4>
+									</div>
+									<div class="timeline-body">
+										<p>soy una descripcion de del trabajo</p>
+									</div>
+								</div>
+							</li>
+							<li class="timeline-inverted">
+								<div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
+								<div class="timeline-panel card">
+									<div class="timeline-heading">
+										<h4 class="timeline-title">Hola amiguero soy un titulo intervertor</h4>
+										<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 horas</small></p>
+									</div>
+									<div class="timeline-body">
+										<p>soy una descripcion de del trabajo</p>
+									</div>
+								</div>
+							</li>
+					</ul>
+				</div>
+				<a (click)="goBack()" class="btn btn-secondary btn-md back"><em class="btn-text">Atrás</em></a>
+			</div>
 		</div>
 </div>

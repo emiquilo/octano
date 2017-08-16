@@ -19,7 +19,6 @@
 							<hr>
 							<p class="card-text font-italic" *ngFor="let bike of person.motorbikes">- {{ bike.brand + ' ' + bike.cc + 'cc' }}</p>
 							<!--    -->
-							<a class="btn btn-danger btn-md" (click)="delete(person); $event.stopPropagation()"> X </a>
 							<a class="btn btn-secondary btn-md" (click)="gotoDetail(index)">Ver ficha</a>
 						</div>
 					</div>

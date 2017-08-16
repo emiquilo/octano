@@ -22,9 +22,7 @@ import { Component } from '@angular/core';
 						<a class="nav-link" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
 					</li>
 				</ul>
-
-				<person-search></person-search>
-
+				<!--<person-search></person-search>-->
 			</div>
 		</nav>
 		<router-outlet></router-outlet>
