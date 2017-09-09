@@ -168,13 +168,16 @@ can be found in the LICENSE file at http://angular.io/license
 }
 
 .dp {
+  font-size: 55px;
   float: left;
   margin-right: 15px;
   border: 5px solid #eee;
+  opacity: .7;
   transition: all 0.2s ease-in-out;
 }
 
 .dp:hover {
+  opacity: 1;
   transform: rotate(360deg);
   -ms-transform: rotate(360deg);
   -webkit-transform: rotate(360deg);
