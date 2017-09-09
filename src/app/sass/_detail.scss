@@ -49,11 +49,11 @@
 }
 
     .timeline:before {
-        top: 0;
+        top: 18px;
         bottom: 0;
         position: absolute;
         content: " ";
-        width: 3px;
+        width: 2px;
         background-color: #eeeeee;
         left: 50%;
         margin-left: -1.5px;
@@ -89,7 +89,7 @@
             float: left;
             border: 1px solid #d4d4d4;
             border-radius: 2px;
-            padding: 15px;
+            padding: 10px 15px;
             position: relative;
             -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
             box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);

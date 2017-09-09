@@ -1,12 +1,11 @@
 <div class="container user-data-sheet" *ngIf="person">
 	<div class="cluster-header">
 		<h5>Ficha técnica</h5>
-		<hr>
 		<span class="eva-3-icon-booking"></span>
 	</div>
-	<div class="cluster-description">
+	<div class="cluster-description" style="background: white; padding: 15px; ">
 		<div class="row">
-			<div class="col-lg-6 profile">
+			<div class="col-lg-12 profile">
 				<a class="pull-left">
 				    <img class="media-object dp img-circle" src="http://via.placeholder.com/100x100" />
 				</a>
@@ -16,9 +15,13 @@
 				    <span class="badge badge-success"> {{ person.motorbikes[0].brand + ' ' + person.motorbikes[0].cc + 'cc'  }} </span>
 				</div>
 			</div>
+		</div>
+
+		<div class="row">
 			<div class="col-lg-12">
 				<div class="page-header">
-						<h5 id="timeline">Servicios</h5>
+						<h5 id="timeline">Historia de Servicios</h5>
+						<hr>
 				</div>
 				<div class="timeline-box">
 					<ul class="timeline">

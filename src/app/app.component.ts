@@ -8,12 +8,12 @@ import { Component } from '@angular/core';
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<a class="navbar-brand" href="/">
-			<span class="logo"></span>
+			<span class="icon-fire"></span>
 				<span>Alto Octanaje</span>
 				<span class="navbar-text">mecanica integral de motos</span>
 			</a>
 
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item active">
 						<a class="nav-link" routerLink="/clientes" routerLinkActive="active">Clientes <span class="sr-only">(current)</span></a>
@@ -22,8 +22,8 @@ import { Component } from '@angular/core';
 						<a class="nav-link" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
 					</li>
 				</ul>
-				<!--<person-search></person-search>-->
-			</div>
+				<person-search></person-search>
+			</div>-->
 		</nav>
 		<router-outlet></router-outlet>
 
