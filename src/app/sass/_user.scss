@@ -63,7 +63,7 @@
     margin-bottom: 10px;
     position: relative;
     h6 {
-      margin: 0
+      margin: 0;
     }
     .btn {
       position: absolute;
@@ -85,6 +85,6 @@
 // arreglos mobile
 @media (max-width: 767px) {
   .products, .amount-task {
-    padding: 0;
+    padding: 15px;
   }
 }

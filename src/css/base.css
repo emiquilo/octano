@@ -464,7 +464,7 @@ can be found in the LICENSE file at http://angular.io/license
 
 @media (max-width: 767px) {
   .products, .amount-task {
-    padding: 0;
+    padding: 15px;
   }
 }
 @font-face {
