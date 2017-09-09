@@ -1,43 +1,23 @@
 <div class="container user-data-sheet" *ngIf="person">
 	<div class="cluster-header">
-		<h4>Ficha técnica</h4>
-		<hr>
+		<h5>Ficha técnica</h5>
 		<span class="eva-3-icon-booking"></span>
 	</div>
 	<div class="cluster-description">
-
 		<div class="row">
-			<div class="col-lg-3 card user-details">
-				<div class="user-image">
-					<img src="http://via.placeholder.com/150x150" alt="" class="rounded-circle">
-				</div>
-				<div class="user-info-block">
-					<div class="user-heading">
-						<p >{{ person.name + ' ' + person.lastName }}</p>
-						<p>{{ person.phone }}</p>
-						<p>{{ person.type }}</p>
-					</div>
+			<div class="col-lg-6 profile">
+				<a class="pull-left">
+				    <img class="media-object dp img-circle" src="http://via.placeholder.com/100x100" />
+				</a>
+				<div class="media-body">
+				    <h5 class="media-heading">{{ person.name + ' ' + person.lastName }} <small> India</small></h5>
+				    <h6>{{ person.type }} </h6>
+				    <span class="badge badge-success"> {{ person.motorbikes[0].brand + ' ' + person.motorbikes[0].cc + 'cc'  }} </span>
 				</div>
 			</div>
-			<div class="col-lg-9">
-				<div class="bs-callout bs-callout-danger">
-					<div class="list-group">
-						<!--  active -->
-					  <a class="list-group-item list-group-item-action flex-column align-items-start">
-					    <div class="d-flex w-100 justify-content-between">
-					      <h5 class="mb-1">Modelo moto</h5>
-					      <small>Ultima Intervención: 3 días</small>
-					    </div>
-					    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-					    <small>Donec id elit non mi porta.</small>
-					  </a>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-12">
+			<div class="col-lg-8">
 				<div class="page-header">
 						<h5 id="timeline">Intervenciones</h5>
-						<hr>
 				</div>
 				<div class="timeline-box">
 					<ul class="timeline">
@@ -46,7 +26,7 @@
 								<div class="timeline-panel card">
 									<div class="timeline-heading">
 										<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 horas</small></p>
-										<h4 class="timeline-title">Hola amiguero soy un titulo intervertor</h4>
+										<h5 class="timeline-title">Hola amiguero soy un titulo intervertor</h5>
 									</div>
 									<div class="timeline-body">
 										<p>soy una descripcion de del trabajo</p>
@@ -57,8 +37,8 @@
 								<div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
 								<div class="timeline-panel card">
 									<div class="timeline-heading">
-										<h4 class="timeline-title">Hola amiguero soy un titulo intervertor</h4>
 										<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 horas</small></p>
+										<h5 class="timeline-title">Hola amiguero soy un titulo intervertor</h5>
 									</div>
 									<div class="timeline-body">
 										<p>soy una descripcion de del trabajo</p>
@@ -67,7 +47,7 @@
 							</li>
 					</ul>
 				</div>
-				<a (click)="goBack()" class="btn btn-secondary btn-md back"><em class="btn-text">Atrás</em></a>
+				<button type="button" (click)="goBack()" class="btn btn-secondary btn-md back">Atrás</button>
 			</div>
 		</div>
 </div>
