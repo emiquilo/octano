@@ -8,92 +8,44 @@
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Crear Usuario</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h5 class="font-weight-bold">Información personal</h5>
+      <form class="userForm" [formGroup]="userForm" (ngSubmit)="onSubmit(userForm.value)">
 
-        <div class="form-group row">
-          <label for="example-text-input" class="col-2 col-form-label">Nombre</label>
-          <div class="col-10">
-            <input class="form-control" type="text" value=" " id="name">
-          </div>
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Crear Usuario</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-        <div class="form-group row">
-          <label for="example-week-input" class="col-2 col-form-label">Teléfono</label>
-          <div class="col-10">
-            <input class="form-control" type="text"  id="phone">
-          </div>
+        <div class="modal-body">
+          <h5 class="font-weight-bold">Información personal</h5>
+
+            <div class="form-group row">
+              <label for="example-text-input" class="col-2 col-form-label">Nombre</label>
+              <div class="col-10">
+                <input class="form-control" type="text" value="Nombre" id="name" [formControl]="userForm.controls['name']">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="example-week-input" class="col-2 col-form-label">Teléfono</label>
+              <div class="col-10">
+                <input class="form-control" type="text"  id="phone" [formControl]="userForm.controls['phone']">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="example-week-input" class="col-2 col-form-label">Domicilio</label>
+              <div class="col-10">
+                <input class="form-control" type="text"  id="address"  [formControl]="userForm.controls['address']">
+              </div>
+            </div>
+
         </div>
-        <div class="form-group row">
-          <label for="example-week-input" class="col-2 col-form-label">Domicilio</label>
-          <div class="col-10">
-            <input class="form-control" type="text"  id="address">
-          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="submit" class="btn btn-primary">Crear!</button>
         </div>
-        <h5 class="font-weight-bold">Datos del rodado</h5>
-        <div class="form-group row">
-          <label for="example-week-input" class="col-2 col-form-label">Marca</label>
-          <div class="col-10">
-            <input class="form-control" type="text"  id="Brand">
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="example-week-input" class="col-2 col-form-label">Version</label>
-          <div class="col-10">
-            <input class="form-control" type="text"  id="version">
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="example-week-input" class="col-2 col-form-label">Version</label>
-          <div class="col-10">
-            <input class="form-control" type="text"  id="version">
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="example-week-input" class="col-2 col-form-label">Kmt</label>
-          <div class="col-10">
-            <input class="form-control" type="text"  id="kmt">
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="example-week-input" class="col-2 col-form-label">Modelo</label>
-          <div class="col-10">
-            <input class="form-control" type="text"  id="year">
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="example-week-input" class="col-2 col-form-label">CC</label>
-          <div class="col-10">
-            <input class="form-control" type="text"  id="year">
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="example-week-input" class="col-2 col-form-label">Tipo</label>
-          <div class="col-10">
-            <input class="form-control" type="text"  id="year">
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="example-week-input" class="col-2 col-form-label">Tipo</label>
-          <div class="col-10">
-            <select class="form-control" id="exampleSelect1">
-              <option>Naked / calle</option>
-              <option>Enduro</option>
-              <option>Cross</option>
-              <option>trial</option>
-            </select>
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Crear!</button>
-      </div>
+
+      </form>
     </div>
+
   </div>
 </div>

@@ -7,7 +7,7 @@ import { User, Product } from './model';
 
 @Injectable()
 export class PersonService {
-	private headers = new Headers({'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'});
+	private headers = new Headers({'Content-Type': 'application/json'});
 	private personsUrl = 'http://lab.concider.net/octano/users';
 	private productsUrl = 'http://lab.concider.net/octano/products';
 
@@ -35,10 +35,11 @@ getPerson(id: number): Promise<User> {
 			.then(() => null)
 			.catch(this.handleError);
 	}
-	create(name: string, lastName: string): Promise<User> {
-		console.log('se agrega a', name, lastName);
+
+	create( user: any): Promise<User> {
+		console.log( 'se agrega a', user.name );
 		return this.http
-			.post(this.personsUrl, JSON.stringify({name: name}), {headers: this.headers})
+			.post(this.personsUrl, JSON.stringify( user ), {headers: this.headers})
 			.toPromise()
 			.then(res => res.json().data as User)
 			.catch(this.handleError);

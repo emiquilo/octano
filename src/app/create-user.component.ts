@@ -1,4 +1,8 @@
 import { Component , OnInit } from '@angular/core';
+import {
+  FormBuilder,
+  FormGroup
+} from '@angular/forms';
 
 import { User } from './model';
 import { PersonService } from './person.service';
@@ -10,10 +14,17 @@ import { PersonService } from './person.service';
 })
 
 export class CreateUserComponent implements OnInit {
+	userForm: FormGroup;
 	persons: User[] = [];
 	showCreateUserModal: boolean = false;
 
-	constructor(private personService: PersonService){}
+	constructor(private personService: PersonService, fb: FormBuilder){
+		this.userForm = fb.group({
+			'name': [],
+			'phone':[],
+			'address': []
+		});
+	}
 
 	ngOnInit(): void{
 		this.personService.getPersons()
@@ -24,16 +35,8 @@ export class CreateUserComponent implements OnInit {
 		this.showCreateUserModal = false;
 	}
 
-	add(name: string, lastName: string): void {
-		name = name.trim();
-		lastName = lastName.trim();
-
-		if (!name && !lastName) { return; }
-
-		this.personService.create(name, lastName)
-		.then(person => {
-			console.log('usuario creado correctamente');
-			this.showCreateUserModal = false;
-		});
+	onSubmit(value:string ): void {
+		console.log("se manda valor ", value);
+		this.personService.create( value );
 	}
 }

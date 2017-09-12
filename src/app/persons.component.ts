@@ -24,15 +24,6 @@ export class PersonsComponent implements OnInit {
 		.then(persons => this.persons = persons);
 	}
 
-	delete(person: User): void {
-		this.personService
-		  .delete(person.id)
-		  .then(() => {
-		    this.persons = this.persons.filter(h => h !== person);
-		    if (this.selectedPerson === person) { this.selectedPerson = null; }
-		  });
-	}
-
 	ngOnInit(): void {
 		this.getPersons();
 	}
