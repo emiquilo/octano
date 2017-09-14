@@ -37,4 +37,14 @@ export class PersonDetailComponent implements OnInit {
 		this.personService.delete(this.person.id);
 		this.goBack();
 	}
+
+	hasServices(): boolean {
+		for (let i = 0; i < this.person.motorbikes.length; i++) {
+			if(this.person.motorbikes[i].serviceHistory){
+				return true;
+			}
+		}
+		return false;
+	}
+
 }

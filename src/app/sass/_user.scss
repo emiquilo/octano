@@ -43,7 +43,6 @@
     }
   }
 }
-
 .amount-task {
   margin-top: 15px;
   padding: 0 15px 0 0;
@@ -55,9 +54,11 @@
     margin: 0;
   }
 }
+.product-list {
+  margin-bottom: 15px;
+}
 
 .add-product {
-  margin: 0 15px;
   .card-header {
     padding-left: 10px;
     margin-bottom: 10px;

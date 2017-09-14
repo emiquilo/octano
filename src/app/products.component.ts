@@ -10,7 +10,7 @@ import { PersonService } from './person.service';
 })
 
 export class ProductsComponent implements OnInit {
-	products: Product[];
+	products: Product[] = [];
 
 	constructor(private personService: PersonService,
 	private router: Router) {}
@@ -20,7 +20,6 @@ export class ProductsComponent implements OnInit {
 		.getProducts()
 		.then(products => this.products = products)
 		.then(() => this.sumarProductos( this.products ));
-
 	}
 
 	sumarProductos( p :any ): number{

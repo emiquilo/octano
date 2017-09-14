@@ -23,9 +23,11 @@
 						<h5 id="timeline">Historia de Servicios</h5>
 						<hr>
 				</div>
-				<div class="timeline-box">
+				<p *ngIf="!hasServices()"> no tiene ningun servicio </p>
+
+				<div *ngIf="hasServices()" class="timeline-box">
 					<ul class="timeline">
-							<li>
+							<li *ngFor="let moto of person.motorbikes">
 								<div class="timeline-badge bg-info"><span class="icon-wrench"></span></div>
 								<div class="timeline-panel card">
 									<div class="timeline-heading">
@@ -33,26 +35,14 @@
 										<h5 class="timeline-title">Basico 3000 km</h5>
 									</div>
 									<div class="timeline-body">
-										<p>- Cambio de aceite</p>
-										<p>- Limpieza de transmisión</p>
-									</div>
-								</div>
-							</li>
-							<li class="timeline-inverted">
-								<div class="timeline-badge bg-danger"><span class="icon-power"></span></div>
-								<div class="timeline-panel card">
-									<div class="timeline-heading">
-										<p><small class="text-muted"><span class="icon-calendar"></span> 06/09/2017</small></p>
-										<h5 class="timeline-title">Electrico</h5>
-									</div>
-									<div class="timeline-body">
-										<p>- Carga de bateria</p>
-										<p>- Cambio relay de arranque</p>
+										<p *ngFor="let service of moto.serviceHistory.electrico">- {{ service }}</p>
+										<p *ngFor="let service of moto.serviceHistory.mecanico">- {{ service }}</p>
 									</div>
 								</div>
 							</li>
 					</ul>
 				</div>
+
 				<button type="button" (click)="goBack()" class="btn btn-secondary btn-md back">Atrás</button>
 				<button type="button" (click)="delete()" class="btn btn-danger btn-md">Eliminar</button>
 			</div>
