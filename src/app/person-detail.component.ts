@@ -39,12 +39,14 @@ export class PersonDetailComponent implements OnInit {
 	}
 
 	hasServices(): boolean {
-		for (let i = 0; i < this.person.motorbikes.length; i++) {
-			if(this.person.motorbikes[i].serviceHistory){
-				return true;
+		var has_service = false;
+		this.person.motorbikes.forEach( moto => {
+			if(moto.serviceHistory){
+				has_service = true;
 			}
-		}
-		return false;
+		} );
+
+		return has_service;
 	}
 
 }
