@@ -2,24 +2,28 @@
 
 body {
   background-color: #f5f5f5;
+  position: relative;
 }
 
 .container {
   margin: 40px auto;
 }
 
-.persons li {
-	cursor: pointer;
-}
-
 .search-result:hover {
   color: #eee;
   background-color: #607D8B;
 }
-
 /*PASOS*/
 .steps {
   padding: 0 20px;
+}
+
+.actions {
+  width: 100%;
+  > button {
+    width: 50%;
+    cursor: pointer;
+  }
 }
 
 // Component
@@ -29,7 +33,7 @@ body {
 @import "detail";
 @import "user";
 @import "icons";
-
+@import "loading";
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {

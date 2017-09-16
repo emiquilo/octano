@@ -1,7 +1,7 @@
 <div class="add-product">
   <div class="card-header">
-    <h6 class="text-left">Lista de productos</h6>
-    <button type="button" class="btn btn-outline-danger">Cargar!</button>
+    <h6 class="text-left">Ultimas novedades</h6>
+    <!--<button type="button" class="btn btn-outline-danger">Cargar!</button>-->
   </div>
   <!--<div class="form-group">
     <p class="text-left">Escribir el nombre del producto</p>
@@ -19,10 +19,11 @@
     </div>
   </div>-->
 </div>
-<div class="product-list text-center" *ngIf="products.length > 0">
+<div class="product-list" *ngIf="products.length > 0">
   <div class="card-block">
-    <ul class="list-group">
-      <li class="list-group-item list-group-item-action justify-content-between" *ngFor="let product of products">
+    <p> <span class="icon-folder"></span> - Actualmente tenes {{ sumarProductos(products) }} articulos! </p>
+    <ul class="list-group text-center">
+      <li class="list-group-item" *ngFor="let product of products">
         {{ product.name }}
         <span class="badge badge-primary">{{ product.amount }}</span>
       </li>
