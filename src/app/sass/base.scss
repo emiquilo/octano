@@ -5,6 +5,12 @@ body {
   position: relative;
 }
 
+h4 {
+  position: relative;
+  text-align: center;
+  margin: 15px 0;
+}
+
 .container {
   margin: 40px auto;
 }
@@ -17,15 +23,6 @@ body {
 .steps {
   padding: 0 20px;
 }
-
-.actions {
-  width: 100%;
-  > button {
-    width: 50%;
-    cursor: pointer;
-  }
-}
-
 // Component
 @import "header";
 // Views
@@ -40,5 +37,9 @@ body {
   .container {
     width: auto;
     margin: 40px 10px;
+
+  }
+  .add-product {
+    width: 100%;
   }
 }

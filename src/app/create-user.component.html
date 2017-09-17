@@ -1,14 +1,13 @@
 <!-- Button trigger modal -->
-
 <div class="actions btn-group" role="group">
-  <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal"  (click)="showCreateUserModal=true">
+  <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#myModal"  (click)="showCreateUserModal=true">
     + Usuario
   </button>
-  <button type="button" class="btn btn-secondary">+ Articulo</button>
+  <button type="button" class="btn btn-outline-secondary">+ Articulo</button>
 </div>
-<!--  active: -show-modal -->
 
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
+<!-- modal users -->
+<div class="modal fade" id="myModal" role="dialog" aria-labelledby="myModal" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <form class="userForm" [formGroup]="userForm" (ngSubmit)="onSubmit(userForm.value)">

@@ -1,6 +1,6 @@
-<div class="add-product">
+<div class="card add-product">
   <div class="card-header">
-    <h6 class="text-left">Ultimas novedades</h6>
+    <div class="terminal"></div>
     <!--<button type="button" class="btn btn-outline-danger">Cargar!</button>-->
   </div>
   <!--<div class="form-group">
@@ -18,17 +18,20 @@
       </div>
     </div>
   </div>-->
-</div>
-<div class="product-list" *ngIf="products.length > 0">
   <div class="card-block">
-    <p> <span class="icon-folder"></span> - Actualmente tenes {{ sumarProductos(products) }} articulos! </p>
-    <ul class="list-group text-center">
+    <p>> Hola amiiiguerroo!!!!</p>
+    <p>> Todo x ellaaaa! .... la botella ;)</p>
+    <!--<ul class="list-group text-center">
       <li class="list-group-item" *ngFor="let product of products">
         {{ product.name }}
         <span class="badge badge-primary">{{ product.amount }}</span>
       </li>
-    </ul>
+    </ul>-->
+  </div>
+  <div class="card-footer">
+    <div class="input-group">
+      <span class="input-group-addon">$</span>
+      <input type="text" class="form-control" aria-label="Text input with radio button" value="Command here">
+    </div>
   </div>
 </div>
-
-<p *ngIf="!products.length" class="text-uppercase"> <span class="icon-crying"></span> Aún no tienes ningun producto!...  </p>

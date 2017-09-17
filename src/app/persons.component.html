@@ -1,36 +1,39 @@
 <div class="container">
-	<div class="row">
-		<div class="users-ctn col-lg-9">
-			<h4>Lista de usuarios</h4>
-			<hr>
-			<div class="row">
-				<!-- Listado de usuarios -->
-				<div class="user col-lg-4" *ngFor="let person of persons; let index = index">
-					<!-- Solo podria ser visible cuando se para la tarea por x motivo
+	<div class="row justify-content-md-center">
+		<div class="col-lg-9">
+			<div class="users-ctn">
+				<h4>Lista de usuarios</h4>
+				<hr>
+				<div class="row">
+					<!-- Listado de usuarios -->
+					<div class="user col-lg-4" *ngFor="let person of persons; let index = index">
+						<!-- Solo podria ser visible cuando se para la tarea por x motivo
 
-					los estados de las tareas pueden ser new, open, pending , closed
+						los estados de las tareas pueden ser new, open, pending , closed
 
-					<div class="alert alert-warning" role="alert"><span class="icon-grin"></span> Estado de tareas</div>
-					-->
-					<div class="card">
-						<div class="card-block">
-							<h5 class="card-title">{{person.name + ' '+ person.lastName}}</h5>
-							<p class="font-weight-bold">Moto</p>
-							<hr>
-							<p class="card-text font-italic" *ngFor="let bike of person.motorbikes">- {{ bike.brand + ' ' + bike.cc + 'cc' }}</p>
-							<!--    -->
-							<button type="button" class="btn btn-secondary btn-md" (click)="gotoDetail(index)">Ver ficha</button>
+						<div class="alert alert-warning" role="alert"><span class="icon-grin"></span> Estado de tareas</div>
+						-->
+						<div class="card">
+							<div class="card-block">
+								<h5 class="card-title">{{person.name + ' '+ person.lastName}}</h5>
+								<p class="font-weight-bold">Moto</p>
+								<hr>
+								<p class="card-text font-italic" *ngFor="let bike of person.motorbikes">- {{ bike.brand + ' ' + bike.cc + 'cc' }}</p>
+								<!--    -->
+								<button type="button" class="btn btn-secondary btn-md" (click)="gotoDetail(index)">Ver ficha</button>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
+	</div>
+	<div class="row justify-content-md-center">
 		<!-- repuestos -->
-		<div class="products col-lg-3">
+		<div class="products col-lg-10">
+			<h4>Qué estas buscando</h4>
+			<hr>
 			<products></products>
-			<!-- modal -->
-			<create-user></create-user>
 		</div>
 	</div>
 </div>

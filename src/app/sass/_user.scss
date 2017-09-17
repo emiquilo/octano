@@ -46,7 +46,6 @@
 .amount-task {
   margin-top: 15px;
   padding: 0 15px 0 0;
-
   .card-block {
     padding: 0;
   }
@@ -57,14 +56,50 @@
 .product-list {
   margin-bottom: 15px;
 }
-
 .add-product {
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 7px;
+  overflow: hidden;
+  opacity: .85;
+
   .card-header {
-    padding-left: 10px;
-    margin-bottom: 10px;
+    padding: 0px;
+    margin: 0px;
     position: relative;
-    h6 {
-      margin: 0;
+    height: 30px;
+
+    .terminal{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #434242;
+
+      &:before,&:after{
+        position:absolute;
+        width:0;
+        height:0;
+        color:whitesmoke;
+        font-size:24px;
+      }
+      &:before{
+        content:">";
+        margin-left:5px;
+        margin-top:-8px;
+      }
+      &:after{
+        content:"_";
+        margin-top:-10px;
+        margin-left:15px;
+        animation: blink 1s linear infinite;
+        font-size: 26px;
+      }
+    }
+    @keyframes blink{
+      0%   {opacity:1.0;}
+      50%  {opacity:0.0;}
+      100% {opacity:1.0;}
     }
     .btn {
       position: absolute;
@@ -77,10 +112,38 @@
       border-left: solid 1px;
     }
   }
-
+  .card-block {
+    padding: 0;
+    font-size: 13px;
+    background: #434242;
+    color: white;
+    max-height: 150px;
+    overflow: hidden;
+    p {
+      margin: 0;
+      border-top: 1px solid gray;
+      padding: 5px;
+    }
+  }
+  .card-footer {
+    border: 1px solid gray;
+    color: white;
+    background: #434242;
+    padding: 10px;
+    .input-group-addon {
+      background: none;
+      color: white;
+    }
+    input {
+      font-size: 13px;
+      border: 1px solid rgba(0,0,0,.15);
+      background: #434242;
+      color: white;
+    }
+  }
 }
 .products {
-  padding: 0 0 0 15px;
+  padding: 0;
 }
 
 // arreglos mobile

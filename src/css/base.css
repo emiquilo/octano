@@ -3,6 +3,12 @@ body {
   position: relative;
 }
 
+h4 {
+  position: relative;
+  text-align: center;
+  margin: 15px 0;
+}
+
 .container {
   margin: 40px auto;
 }
@@ -17,14 +23,6 @@ body {
   padding: 0 20px;
 }
 
-.actions {
-  width: 100%;
-}
-.actions > button {
-  width: 50%;
-  cursor: pointer;
-}
-
 .navbar-brand {
   position: relative;
   padding-left: 30px;
@@ -34,10 +32,6 @@ body {
   display: block;
   font-size: 13px;
   padding: 0;
-}
-
-.header {
-  z-index: 100;
 }
 
 .header .logo {
@@ -445,13 +439,55 @@ can be found in the LICENSE file at http://angular.io/license
   margin-bottom: 15px;
 }
 
-.add-product .card-header {
-  padding-left: 10px;
-  margin-bottom: 10px;
-  position: relative;
+.add-product {
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 7px;
+  overflow: hidden;
+  opacity: .85;
 }
-.add-product .card-header h6 {
-  margin: 0;
+.add-product .card-header {
+  padding: 0px;
+  margin: 0px;
+  position: relative;
+  height: 30px;
+}
+.add-product .card-header .terminal {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #434242;
+}
+.add-product .card-header .terminal:before, .add-product .card-header .terminal:after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  color: whitesmoke;
+  font-size: 24px;
+}
+.add-product .card-header .terminal:before {
+  content: ">";
+  margin-left: 5px;
+  margin-top: -8px;
+}
+.add-product .card-header .terminal:after {
+  content: "_";
+  margin-top: -10px;
+  margin-left: 15px;
+  animation: blink 1s linear infinite;
+  font-size: 26px;
+}
+@keyframes blink {
+  0% {
+    opacity: 1.0;
+  }
+  50% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1.0;
+  }
 }
 .add-product .card-header .btn {
   position: absolute;
@@ -463,9 +499,38 @@ can be found in the LICENSE file at http://angular.io/license
   cursor: pointer;
   border-left: solid 1px;
 }
+.add-product .card-block {
+  padding: 0;
+  font-size: 13px;
+  background: #434242;
+  color: white;
+  max-height: 150px;
+  overflow: hidden;
+}
+.add-product .card-block p {
+  margin: 0;
+  border-top: 1px solid gray;
+  padding: 5px;
+}
+.add-product .card-footer {
+  border: 1px solid gray;
+  color: white;
+  background: #434242;
+  padding: 10px;
+}
+.add-product .card-footer .input-group-addon {
+  background: none;
+  color: white;
+}
+.add-product .card-footer input {
+  font-size: 13px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: #434242;
+  color: white;
+}
 
 .products {
-  padding: 0 0 0 15px;
+  padding: 0;
 }
 
 @media (max-width: 767px) {
@@ -2916,5 +2981,9 @@ can be found in the LICENSE file at http://angular.io/license
   .container {
     width: auto;
     margin: 40px 10px;
+  }
+
+  .add-product {
+    width: 100%;
   }
 }
