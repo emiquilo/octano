@@ -3,7 +3,25 @@
   <div class="col-lg-9">
     <div class="products ">
       <h4><span><span class="icon-reddit"></span> Elige tus palabras sabiamente! </span></h4>
-      <products></products>
+      <div class="card add-product">
+        <div class="card-header">
+          <div class="terminal"></div>
+        </div>
+
+        <div class="card-block">
+          <ul>
+            <li *ngFor="let log of logs">{{ log }}</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <div class="input-group">
+            <span class="input-group-btn">
+              <button class="btn btn-secondary" type="button" (click)="shoot()">Go!</button>
+            </span>
+            <input type="text" class="form-control" placeholder="command..."  [formControl]="commandInput">
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
