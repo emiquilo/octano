@@ -11,13 +11,12 @@ import { AppRoutingModule } from './app-routing.module';
 
 
 import { AppComponent }  from './app.component';
-import { DashboardComponent } from './dashboard.component';
+import { CliComponent } from './octano-cli.component';
 import { PersonsComponent } from './persons.component';
 import { CreateUserComponent } from './create-user.component';
 import { ProductsComponent } from './products.component';
 import { PersonDetailComponent } from './person-detail.component';
 import { PersonService } from './person.service';
-import { PersonSearchComponent } from './person-search.component';
 
 /*
 Usando la notacion NgModule se declara un modulo y en el parametro array imports
@@ -35,10 +34,9 @@ se inyectan los modulos necesarios para la app
 
 	declarations: [
 		AppComponent,
-		DashboardComponent,
+		CliComponent,
 		PersonDetailComponent,
 		PersonsComponent,
-		PersonSearchComponent,
 		CreateUserComponent,
 		ProductsComponent
 	],

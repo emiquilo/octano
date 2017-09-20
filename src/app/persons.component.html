@@ -2,8 +2,7 @@
 	<div class="row justify-content-md-center">
 		<div class="col-lg-9">
 			<div class="users-ctn">
-				<h4>Lista de usuarios</h4>
-				<hr>
+				<h4> <span> <span class="icon-users"></span> Clientes </span></h4>
 				<div class="row">
 					<!-- Listado de usuarios -->
 					<div class="user col-lg-4" *ngFor="let person of persons; let index = index">
@@ -28,12 +27,6 @@
 			</div>
 		</div>
 	</div>
-	<div class="row justify-content-md-center">
-		<!-- repuestos -->
-		<div class="products col-lg-10">
-			<h4>Qué estas buscando</h4>
-			<hr>
-			<products></products>
-		</div>
-	</div>
+	<!-- terminal -->
+	<octano-cli></octano-cli>
 </div>

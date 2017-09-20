@@ -6,7 +6,21 @@ body {
 h4 {
   position: relative;
   text-align: center;
-  margin: 15px 0;
+  margin: 20px 0;
+}
+h4:before {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  background: lightgray;
+  z-index: -1;
+}
+h4 > span {
+  padding: 0 30px;
+  background: #f5f5f5;
 }
 
 .container {
@@ -440,7 +454,6 @@ can be found in the LICENSE file at http://angular.io/license
 }
 
 .add-product {
-  width: 90%;
   margin: 0 auto;
   border-radius: 7px;
   overflow: hidden;

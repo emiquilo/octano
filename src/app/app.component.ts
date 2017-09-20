@@ -13,13 +13,10 @@ import { Component } from '@angular/core';
 				<span class="navbar-text">mecanica integral de motos</span>
 			</a>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<form class="form-inline my-2 my-lg-0">
-					<create-user></create-user>
-				</form>
+				<create-user></create-user>
 			</div>
 		</nav>
 		<router-outlet></router-outlet>
-
 	`
 })
 

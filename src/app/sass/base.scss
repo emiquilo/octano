@@ -8,7 +8,21 @@ body {
 h4 {
   position: relative;
   text-align: center;
-  margin: 15px 0;
+  margin: 20px 0;
+  &:before {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    background: lightgray;
+    z-index: -1;
+  }
+  > span {
+    padding: 0 30px;
+    background: #f5f5f5;
+  }
 }
 
 .container {
@@ -26,7 +40,6 @@ h4 {
 // Component
 @import "header";
 // Views
-@import "dashboard";
 @import "detail";
 @import "user";
 @import "icons";
