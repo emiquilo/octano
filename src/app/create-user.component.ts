@@ -27,8 +27,7 @@ export class CreateUserComponent implements OnInit {
 	}
 
 	ngOnInit(): void{
-		this.personService.getPersons()
-		.then(persons => this.persons = persons);
+		
 	}
 
 	deleteModal(){

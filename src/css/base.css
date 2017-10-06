@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 body {
   background-color: #f5f5f5;
   position: relative;
@@ -77,92 +78,6 @@ h4 > span {
   color: black;
 }
 
-a {
-  text-decoration: none;
-}
-
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-h4 {
-  position: relative;
-}
-
-.grid {
-  margin: 0;
-}
-
-.col-1-4 {
-  width: 25%;
-}
-
-.module {
-  padding: 20px;
-  text-align: center;
-  color: #eee;
-  max-height: 120px;
-  min-width: 120px;
-  background-color: #607D8B;
-  border-radius: 2px;
-}
-
-.module:hover {
-  background-color: #EEE;
-  cursor: pointer;
-  color: #607d8b;
-}
-
-.grid-pad {
-  padding: 10px 0;
-}
-
-.grid-pad > [class*='col-']:last-of-type {
-  padding-right: 20px;
-}
-
-@media (max-width: 600px) {
-  .module {
-    font-size: 10px;
-    max-height: 75px;
-  }
-}
-@media (max-width: 1024px) {
-  .grid {
-    margin: 0;
-  }
-
-  .module {
-    min-width: 60px;
-  }
-}
-.stats .module {
-  width: 30%;
-  display: inline-block;
-  height: 55px;
-  padding: 10px;
-  margin-bottom: 5px;
-  vertical-align: middle;
-}
-
-.stats .module:hover {
-  background-color: #607D8B;
-  cursor: initial;
-  color: #EEE;
-}
-
-.stats .module .amount {
-  display: block;
-  line-height: 1.5;
-}
-
-/*
-Copyright 2017 Google Inc. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
-*/
 .user-data-sheet .btn.btn-secondary {
   position: inherit;
   bottom: 0;
@@ -394,6 +309,7 @@ can be found in the LICENSE file at http://angular.io/license
     right: auto;
   }
 }
+/* Google Fonts */
 .selected {
   top: -1px;
   box-shadow: 0px 1px 5px #999;
@@ -453,42 +369,41 @@ can be found in the LICENSE file at http://angular.io/license
   margin-bottom: 15px;
 }
 
-.add-product {
+.cli-component {
   margin: 0 auto;
   border-radius: 7px;
   overflow: hidden;
   opacity: .85;
 }
-.add-product .card-header {
+.cli-component .card-header {
   padding: 0px;
   margin: 0px;
   position: relative;
   height: 30px;
 }
-.add-product .card-header .terminal {
+.cli-component .card-header .terminal {
   position: absolute;
   top: 0;
   bottom: 0;
   width: 100%;
   background-color: #434242;
 }
-.add-product .card-header .terminal:before, .add-product .card-header .terminal:after {
+.cli-component .card-header .terminal:before, .cli-component .card-header .terminal:after {
   position: absolute;
   width: 0;
   height: 0;
   color: whitesmoke;
   font-size: 24px;
 }
-.add-product .card-header .terminal:before {
+.cli-component .card-header .terminal:before {
   content: ">";
   margin-left: 5px;
   margin-top: -8px;
 }
-.add-product .card-header .terminal:after {
+.cli-component .card-header .terminal:after {
   content: "_";
   margin-top: -10px;
   margin-left: 15px;
-  animation: blink 1s linear infinite;
   font-size: 26px;
 }
 @keyframes blink {
@@ -502,7 +417,7 @@ can be found in the LICENSE file at http://angular.io/license
     opacity: 1.0;
   }
 }
-.add-product .card-header .btn {
+.cli-component .card-header .btn {
   position: absolute;
   border-radius: initial;
   top: 0;
@@ -512,30 +427,41 @@ can be found in the LICENSE file at http://angular.io/license
   cursor: pointer;
   border-left: solid 1px;
 }
-.add-product .card-block {
+.cli-component .card-block {
   padding: 0;
   font-size: 13px;
-  background: #434242;
+  background: black;
   color: white;
-  max-height: 150px;
-  overflow: hidden;
+  height: 150px;
+  /* Animation */
 }
-.add-product .card-block p {
+.cli-component .card-block.typewriter p {
   margin: 0;
-  border-top: 1px solid gray;
-  padding: 5px;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typewriter 4s steps(44) 1s 1 normal both;
 }
-.add-product .card-footer {
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 24em;
+  }
+}
+.cli-component .card-footer {
   border: 1px solid gray;
   color: white;
   background: #434242;
   padding: 10px;
 }
-.add-product .card-footer .input-group-addon {
+.cli-component .card-footer .input-group-addon {
   background: none;
   color: white;
 }
-.add-product .card-footer input {
+.cli-component .card-footer input {
   font-size: 13px;
   border: 1px solid rgba(0, 0, 0, 0.15);
   background: #434242;

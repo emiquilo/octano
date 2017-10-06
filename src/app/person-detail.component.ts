@@ -26,16 +26,15 @@ export class PersonDetailComponent implements OnInit {
 		.switchMap((params: Params) => this.personService.getPerson(+params['id']))
 		.subscribe(person => this.person = person);
 	}
-	save(): void {
-		this.personService.update(this.person)
-		.then(() => this.goBack());
-	}
+
 	goBack(): void {
+		this.personService.updateModel();
 		this.location.back();
 	}
+
 	delete(){
-		this.personService.delete(this.person.id);
-		this.goBack();
+		this.personService.delete(this.person.id)
+		.then(() => this.goBack());
 	}
 
 	hasServices(): boolean {

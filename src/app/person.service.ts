@@ -1,5 +1,6 @@
 import { Injectable }    from '@angular/core';
 import { Headers, Http } from '@angular/http';
+import {  BehaviorSubject }    from 'rxjs/BehaviorSubject';
 
 import 'rxjs/add/operator/toPromise';
 
@@ -11,14 +12,25 @@ export class PersonService {
 	private personsUrl = 'http://lab.concider.net/octano/users';
 	private productsUrl = 'http://lab.concider.net/octano/products';
 
-	constructor(private http: Http){}
+	private persons: any[] = [];
+	public personsObs: BehaviorSubject<any[]>;
 
-	getPersons(): Promise<User[]> {
-		return this.http.get(this.personsUrl)
-			.toPromise()
-			.then(response => response.json())
-			.catch(this.handleError);
+	constructor(private http: Http){
+		this.personsObs = new BehaviorSubject<any[]>(this.persons);
+		this.updateModel();
 	}
+
+	updateModel() {
+		this.http.get(this.personsUrl)
+			.toPromise()
+			.then(response => this.persons = response.json())
+			.then(this.broadcastDataModelChange.bind(this))
+			.catch(this.handleError);
+  }
+
+  private broadcastDataModelChange() {
+    this.personsObs.next(this.persons);
+  }
 
 getPerson(id: number): Promise<User> {
 	  const url = `${this.personsUrl}/${id}`;
@@ -37,7 +49,6 @@ getPerson(id: number): Promise<User> {
 	}
 
 	create( user: any): Promise<User> {
-		console.log( 'se agrega a', user.name );
 		return this.http
 			.post(this.personsUrl, JSON.stringify( user ), {headers: this.headers})
 			.toPromise()

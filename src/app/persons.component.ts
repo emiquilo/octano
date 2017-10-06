@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {  BehaviorSubject }    from 'rxjs/BehaviorSubject';
 
 import { User } from './model';
 import { Moto } from './model';
@@ -16,16 +17,15 @@ export class PersonsComponent implements OnInit {
 
 	constructor(
 		private personService: PersonService,
-		private router: Router) {}
+		private router: Router) {
 
-	getPersons(): void {
-		this.personService
-		.getPersons()
-		.then(persons => this.persons = persons);
-	}
+		}
 
 	ngOnInit(): void {
-		this.getPersons();
+		this.personService.personsObs.subscribe(newPersons => {
+			console.log("lista de personas modificada:", newPersons);
+			this.persons = newPersons;
+		});
 	}
 
 	gotoDetail(index: number): void {

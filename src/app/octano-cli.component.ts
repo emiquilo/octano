@@ -32,7 +32,7 @@ export class CliComponent implements OnInit {
 	}
 
 	greeting() {
-		setTimeout(()=> {this.logs.push(" Hola pescao!")}, 5000);
+		setTimeout(()=> {this.logs.push(" Hola pelao! ")}, 5000);
 	}
 
 	ngOnInit(){
