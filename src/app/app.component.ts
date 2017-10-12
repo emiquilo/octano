@@ -16,7 +16,9 @@ import { Component } from '@angular/core';
 				<create-user></create-user>
 			</div>
 		</nav>
-		<router-outlet></router-outlet>
+		<div class="container">
+			<router-outlet></router-outlet>
+		<div>
 	`
 })
 

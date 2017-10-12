@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 
 import { AppComponent }  from './app.component';
+import { FormSignInComponent }  from './form-signin.component';
 import { CliComponent } from './octano-cli.component';
 import { PersonsComponent } from './persons.component';
 import { CreateUserComponent } from './create-user.component';
@@ -34,6 +35,7 @@ se inyectan los modulos necesarios para la app
 
 	declarations: [
 		AppComponent,
+		FormSignInComponent,
 		CliComponent,
 		PersonDetailComponent,
 		PersonsComponent,

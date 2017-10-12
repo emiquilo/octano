@@ -1,24 +1,21 @@
-<div class="row justify-content-md-center">
-  <!-- repuestos -->
-  <div class="col-lg-9">
-    <div class="cli-component ">
-      <h4><span><span class="icon-reddit"></span> Elige tus palabras sabiamente! </span></h4>
-      <div class="card add-product">
-        <div class="card-header">
-          <div class="terminal"></div>
-        </div>
 
-        <div class="card-block typewriter">
-          <p *ngFor="let log of logs">{{ log }}</p>
-        </div>
-        <div class="card-footer">
-          <div class="input-group">
-            <span class="input-group-btn">
-              <button class="btn btn-secondary" type="button" (click)="shoot()">Go!</button>
-            </span>
-            <input type="text" class="form-control" placeholder="command..."  [formControl]="commandInput">
-          </div>
-        </div>
+  <!-- CLI -->
+<div class="cli-component ">
+  <h4><span><span class="icon-reddit"></span> Elige tus palabras sabiamente! </span></h4>
+  <div class="card add-product">
+    <div class="card-header">
+      <div class="terminal"></div>
+    </div>
+
+    <div class="card-block typewriter">
+      <p *ngFor="let log of logs">{{ log }}</p>
+    </div>
+    <div class="card-footer">
+      <div class="input-group">
+        <span class="input-group-btn">
+          <button class="btn btn-secondary" type="button" (click)="shoot()">Go!</button>
+        </span>
+        <input type="text" class="form-control" placeholder="command..."  [formControl]="commandInput">
       </div>
     </div>
   </div>
