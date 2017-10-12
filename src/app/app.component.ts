@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
 	selector: 'my-app',
 	template: `
 		<nav class="header navbar navbar-expand-lg navbar-dark bg-dark navbar navbar-toggleable-md">
-			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<button *ngIf="estadoLogin" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<a class="navbar-brand" href="/">
@@ -12,7 +12,7 @@ import { Component } from '@angular/core';
 				<span>Alto Octanaje</span>
 				<span class="navbar-text">mecanica integral de motos</span>
 			</a>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<div *ngIf="estadoLogin" class="collapse navbar-collapse" id="navbarSupportedContent">
 				<create-user></create-user>
 			</div>
 		</nav>
@@ -24,4 +24,6 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
 	title = 'ALTO OCTANAJE';
+	@Input() estadoLogin: string;
+
 }

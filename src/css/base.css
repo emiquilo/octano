@@ -28,14 +28,9 @@ h4 > span {
   margin: 40px auto;
 }
 
-.search-result:hover {
-  color: #eee;
-  background-color: #607D8B;
-}
-
-/*PASOS*/
-.steps {
-  padding: 0 20px;
+.form-signin {
+  max-width: 350px;
+  margin: 0 auto;
 }
 
 .navbar-brand {

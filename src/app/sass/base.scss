@@ -29,14 +29,11 @@ h4 {
   margin: 40px auto;
 }
 
-.search-result:hover {
-  color: #eee;
-  background-color: #607D8B;
+.form-signin {
+  max-width: 350px;
+  margin: 0 auto;
 }
-/*PASOS*/
-.steps {
-  padding: 0 20px;
-}
+
 // Component
 @import "header";
 // Views
