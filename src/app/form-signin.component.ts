@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AppComponent } from './app.component';
 
 import {
   FormBuilder,
@@ -10,27 +9,32 @@ import {
 @Component({
 	selector: 'form-signin',
 	templateUrl: './form-signin.component.html',
-  directives: [AppComponent]
 })
 
 export class FormSignInComponent implements OnInit {
+  loginForm: FormGroup;
   public isLogged: boolean;
 
-  constructor(){
+
+  constructor( fb: FormBuilder ){
 		this.isLogged = false;
+    this.loginForm = fb.group({
+      'user' : [],
+      'pass' : []
+    });
 	}
 
   ngOnInit(): void {
-    console.log(`Estado login: ` this.isLogged);
+    console.log('Estado login: ' + this.isLogged);
   }
 
-	login(usuario, pass){
-    let usuario = document.getElementById('inputEmail').value;
-    let pass =  document.getElementById('inputPassword').value;
+	onSubmit(value): void {
 
-    if(usuario == "test" && pass == "test"){
+    console.log('valores \n: ', value );
+
+    if(value.user == "test" && value.pass == "test"){
 			this.isLogged = true;
-      console.log(`Estado login: ` this.isLogged);
+      console.log('Estado login: ' + this.isLogged);
 		}
 	}
 
