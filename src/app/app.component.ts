@@ -12,7 +12,7 @@ import { Component, Input } from '@angular/core';
 				<span>Alto Octanaje</span>
 				<span class="navbar-text">mecanica integral de motos</span>
 			</a>
-			<div *ngIf="estadoLogin" class="collapse navbar-collapse" id="navbarSupportedContent">
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<create-user></create-user>
 			</div>
 		</nav>

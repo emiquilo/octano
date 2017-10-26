@@ -60,17 +60,31 @@
   margin-bottom: 15px;
 }
 .cli-component {
-  //width: 90%;
+  cursor: pointer;
   margin: 0 auto;
   border-radius: 7px;
   overflow: hidden;
   opacity: .85;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+
+  &.visible {
+    
+    .card-header {
+      width: auto;
+    }
+    .card-header, .card-block, .card-footer {
+      display: block;
+    }
+  }
 
   .card-header {
     padding: 0px;
     margin: 0px;
     position: relative;
     height: 30px;
+    width: 30px;
 
     .terminal{
       position: absolute;
@@ -95,7 +109,7 @@
         content:"_";
         margin-top:-10px;
         margin-left:15px;
-        //animation: blink 1s linear infinite;
+        animation: blink 1s linear infinite;
         font-size: 26px;
       }
     }
@@ -116,11 +130,12 @@
     }
   }
   .card-block {
+    display: none;
     padding: 0;
     font-size: 13px;
     background: black;
     color: white;
-    height: 150px;
+    height: 120px;
     &.typewriter  {
       p {
         margin: 0;
@@ -140,6 +155,7 @@
     }
   }
   .card-footer {
+    display: none;
     border: 1px solid gray;
     color: white;
     background: #434242;
@@ -159,6 +175,7 @@
 .products {
   padding: 0;
 }
+
 
 // arreglos mobile
 @media (max-width: 767px) {

@@ -23,7 +23,6 @@ export class PersonsComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.personService.personsObs.subscribe(newPersons => {
-			console.log("lista de personas modificada:", newPersons);
 			this.persons = newPersons;
 		});
 	}

@@ -365,16 +365,27 @@ h4 > span {
 }
 
 .cli-component {
+  cursor: pointer;
   margin: 0 auto;
   border-radius: 7px;
   overflow: hidden;
   opacity: .85;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+.cli-component.visible .card-header {
+  width: auto;
+}
+.cli-component.visible .card-header, .cli-component.visible .card-block, .cli-component.visible .card-footer {
+  display: block;
 }
 .cli-component .card-header {
   padding: 0px;
   margin: 0px;
   position: relative;
   height: 30px;
+  width: 30px;
 }
 .cli-component .card-header .terminal {
   position: absolute;
@@ -399,6 +410,7 @@ h4 > span {
   content: "_";
   margin-top: -10px;
   margin-left: 15px;
+  animation: blink 1s linear infinite;
   font-size: 26px;
 }
 @keyframes blink {
@@ -423,11 +435,12 @@ h4 > span {
   border-left: solid 1px;
 }
 .cli-component .card-block {
+  display: none;
   padding: 0;
   font-size: 13px;
   background: black;
   color: white;
-  height: 150px;
+  height: 120px;
   /* Animation */
 }
 .cli-component .card-block.typewriter p {
@@ -447,6 +460,7 @@ h4 > span {
   }
 }
 .cli-component .card-footer {
+  display: none;
   border: 1px solid gray;
   color: white;
   background: #434242;
