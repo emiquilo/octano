@@ -38,14 +38,14 @@ export class PersonDetailComponent implements OnInit {
 	}
 
 	hasServices(): boolean {
-		var has_service = false;
-		this.person.motorbikes.forEach( moto => {
-			if(moto.serviceHistory){
-				has_service = true;
-			}
-		} );
+		//var has_service = false;
+		//this.person.motorbikes.forEach( moto => {
+		//	if(moto.serviceHistory){
+		//		has_service = true;
+		//	}
+		//} );
 
-		return has_service;
+		return this.person.motorbikes && this.person.motorbikes.some( moto => moto.serviceHistory );
 	}
 
 }
